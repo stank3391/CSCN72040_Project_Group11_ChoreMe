@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSCN72040_Project_Group11_ChoreMe", "CSCN72040_Project_Group11_ChoreMe\CSCN72040_Project_Group11_ChoreMe.csproj", "{1975B75B-3CC7-42F8-BE84-4853A21BD818}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1975B75B-3CC7-42F8-BE84-4853A21BD818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1975B75B-3CC7-42F8-BE84-4853A21BD818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1975B75B-3CC7-42F8-BE84-4853A21BD818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1975B75B-3CC7-42F8-BE84-4853A21BD818}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E79D2130-08A6-4289-840B-7897974741B8}
+	EndGlobalSection
+EndGlobal
