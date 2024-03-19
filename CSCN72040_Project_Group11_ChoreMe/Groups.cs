@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSCN72040_Project_Group11_ChoreMe
+namespace ChoreMe
 {
-    interface IteratorInterface<T>
+    internal class Groups
     {
-        bool hasNext();
-        T getNext();
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class GroupsIterator
+    internal class Users
     {
+        string name;
     }
 }
