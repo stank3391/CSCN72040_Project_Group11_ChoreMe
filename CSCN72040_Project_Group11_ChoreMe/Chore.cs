@@ -23,14 +23,34 @@ namespace ChoreMe
         public DateTime DueDate { get { return dueDate; } set { dueDate = value; } }
         public DateTime CreationDate { get { return creationDate; } set { creationDate = value; } }
 
-        Chore(string name, string desc, int prior, string cat, DateTime due)
+        public Chore(string name, string desc, int prior, string cat, DateTime due)
         {
             this.Name = name;
             this.Description = desc;
             this.Priority = prior;
             this.Category = cat;
             this.DueDate = due;
+            this.CreationDate = DateTime.Now;
         }
 
+        public Chore(Memento m)
+        {
+            this.Name = m.Name;
+            this.Description = m.Description;
+            this.Priority = m.Priority;
+            this.Category = m.Category;
+            this.DueDate = m.DueDate;
+            this.CreationDate = m.CreationDate;
+        }
+
+        public Memento StoreInMemento()
+        {
+            return new Memento(this);
+        }
+
+        public Chore RestoreFromMemento(Memento m)
+        {
+            return new Chore(m);
+        }
     }
 }
