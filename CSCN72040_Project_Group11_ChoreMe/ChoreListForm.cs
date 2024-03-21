@@ -12,9 +12,17 @@ namespace CSCN72040_Project_Group11_ChoreMe
 {
     public partial class ChoreListForm : Form
     {
-        public ChoreListForm()
+        public Form MainForm { get; set; }
+        public ChoreListForm(Form mainForm = null)
         {
             InitializeComponent();
+            MainForm = mainForm;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm.Show();
         }
     }
 }
