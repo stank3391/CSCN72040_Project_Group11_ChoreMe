@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class ChoresCreationDateIterator
+    internal class ChoresCreationDateIterator : Iterator
     {
+        Dictionary<DateTime, Chore> ChoreCreationDate = new Dictionary<DateTime, Chore>();
+        public Iterator CreateIterator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

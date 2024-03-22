@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class ChoresCategoryIterator
+    internal class ChoresCategoryIterator : Iterator
     {
+        HashSet<Chore> ChoresCategory = new HashSet<Chore>();
+        public Iterator CreateIterator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

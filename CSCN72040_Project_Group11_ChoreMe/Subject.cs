@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class Subject
+    internal interface Subject
     {
+        void registerObserver(Observer ob);
+        void removeObserver(Observer ob);
+        void notifyObserver();
     }
 }

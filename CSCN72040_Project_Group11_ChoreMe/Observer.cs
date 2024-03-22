@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class Observer
+    internal interface Observer
     {
+        void update();
+        void setSubject(Chore ch);
     }
 }

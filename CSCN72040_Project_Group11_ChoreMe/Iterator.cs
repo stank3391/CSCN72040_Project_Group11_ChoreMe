@@ -8,6 +8,6 @@ namespace ChoreMe
 {
     interface Iterator
     {
-
+        public Iterator CreateIterator();
     }
 }

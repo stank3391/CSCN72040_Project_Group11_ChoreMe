@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class GroupsIterator
+    internal class GroupsIterator : Iterator
     {
+        public List<Users> Persons = new List<Users>();
+        public Iterator CreateIterator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
