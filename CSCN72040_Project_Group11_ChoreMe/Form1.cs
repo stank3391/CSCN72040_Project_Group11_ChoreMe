@@ -1,3 +1,5 @@
+using CSCN72030_group6;
+
 namespace CSCN72040_Project_Group11_ChoreMe
 {
     public partial class Form1 : Form
