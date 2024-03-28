@@ -43,5 +43,10 @@ namespace CSCN72040_Project_Group11_ChoreMe
             this.Hide();
             CLForm.Show();
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

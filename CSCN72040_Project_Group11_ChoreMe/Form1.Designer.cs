@@ -34,11 +34,13 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(243, 89);
+            button1.Location = new Point(3, 3);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 0;
@@ -76,17 +78,27 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += ScrollViewBtn;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(button1);
+            flowLayoutPanel1.Location = new Point(145, 227);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(250, 125);
+            flowLayoutPanel1.TabIndex = 4;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -96,5 +108,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
