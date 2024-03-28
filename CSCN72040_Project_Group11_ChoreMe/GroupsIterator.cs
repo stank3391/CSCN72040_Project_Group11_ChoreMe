@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class GroupsIterator : Iterator
+    internal class GroupsIterator : Iterator<Users>
     {
-        public List<Users> Persons = new List<Users>();
-        public Iterator CreateIterator()
+        private List<Users> Persons = new List<Users>();
+        private int current = 0;
+        GroupsIterator(List<Users> persons) => this.Persons = persons;
+
+        public Users getNext()
         {
-            throw new NotImplementedException();
+            return Persons[current++];
+        }
+
+        public bool hasNext()
+        {
+            return current < Persons.Count;
         }
     }
 }

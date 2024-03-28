@@ -45,7 +45,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(852, 422);
             Controls.Add(button1);
             Name = "ChoreListForm";
             Text = "ChoreListForm";

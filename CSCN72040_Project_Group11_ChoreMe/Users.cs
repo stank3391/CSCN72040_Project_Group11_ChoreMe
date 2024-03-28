@@ -9,5 +9,9 @@ namespace ChoreMe
     internal class Users
     {
         string name;
+        ChoresPriorityIterator chorePriorityIterator;
+        ChoresCategoryIterator choreCategoryIterator;
+        ChoresDueDateIterator choreDueDateIterator;
+        ChoresCreationDateIterator choreCreationDateIterator;
     }
 }
