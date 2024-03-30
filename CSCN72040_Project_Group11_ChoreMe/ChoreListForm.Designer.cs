@@ -35,6 +35,7 @@ namespace CSCN72040_Project_Group11_ChoreMe
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
+            button7 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -95,21 +96,33 @@ namespace CSCN72040_Project_Group11_ChoreMe
             button5.TabIndex = 5;
             button5.Text = "Create Chore";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
-            button6.Location = new Point(492, 12);
+            button6.Location = new Point(493, 13);
             button6.Name = "button6";
             button6.Size = new Size(121, 29);
             button6.TabIndex = 6;
             button6.Text = "Completed";
             button6.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            button7.Location = new Point(717, 14);
+            button7.Name = "button7";
+            button7.Size = new Size(71, 28);
+            button7.TabIndex = 7;
+            button7.Text = "Back";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
             // ChoreListForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -131,5 +144,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
         private Button button4;
         private Button button5;
         private Button button6;
+        private Button button7;
     }
 }

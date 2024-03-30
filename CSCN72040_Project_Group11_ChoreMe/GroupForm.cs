@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace CSCN72040_Project_Group11_ChoreMe
 {
-    public partial class CalendarMonthForm : Form
+    public partial class GroupForm : Form
     {
         public Form MainForm { get; set; }
-        public CalendarMonthForm(Form mainForm = null)
+        public GroupForm(Form mainForm = null)
         {
             InitializeComponent();
             MainForm = mainForm;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
             MainForm.Show();

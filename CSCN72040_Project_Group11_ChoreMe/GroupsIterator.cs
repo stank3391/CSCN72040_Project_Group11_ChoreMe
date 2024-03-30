@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class GroupsIterator : Iterator<Users>
+    internal class GroupsIterator : Iterator<User>
     {
-        private List<Users> Persons = new List<Users>();
+        private List<User> Persons = new List<User>();
         private int current = 0;
-        GroupsIterator(List<Users> persons) => this.Persons = persons;
+        GroupsIterator(List<User> persons) => this.Persons = persons;
 
-        public Users Next()
+        public User Next()
         {
             return Persons[current++];
         }
