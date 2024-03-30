@@ -7,12 +7,23 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class ChoresDueDateIterator : Iterator
+    internal class ChoresDueDateIterator : Iterator<Chore>
     {
-        public ArrayList ChoreDueDate = new ArrayList();
-        public Iterator CreateIterator()
+        private List<Chore> ChoreDueDate = new List<Chore>();
+        private int current = 0;
+        
+        public ChoresDueDateIterator(List<Chore> chores)
         {
-            throw new NotImplementedException();
+            ChoreDueDate = chores.OrderBy(o => o.DueDate).ToList();
+        }
+        public Chore Next()
+        {
+            return ChoreDueDate[++current];
+        }
+
+        public bool hasNext()
+        {
+            return current <= ChoreDueDate.Count -1;
         }
     }
 }

@@ -6,12 +6,23 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class ChoresCreationDateIterator : Iterator
+    internal class ChoresCreationDateIterator : Iterator<Chore>
     {
-        Dictionary<DateTime, Chore> ChoreCreationDate = new Dictionary<DateTime, Chore>();
-        public Iterator CreateIterator()
+        private List<Chore> ChoreCreationDate = new List<Chore>();
+        private int current = 0;
+
+        public ChoresCreationDateIterator(List<Chore> chores)
         {
-            throw new NotImplementedException();
+            ChoreCreationDate = chores.OrderBy(o => o.DueDate).ToList();
+        }
+        public Chore Next()
+        {
+            return ChoreCreationDate[++current];
+        }
+
+        public bool hasNext()
+        {
+            return current <= ChoreCreationDate.Count - 1;
         }
     }
 }
