@@ -36,11 +36,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
             button5 = new Button();
             button6 = new Button();
             SuspendLayout();
-            //stuff
-            flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            flowLayoutPanel1.WrapContents = false;
-            flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            flowLayoutPanel1.AutoScroll = true;
             // 
             // button1
             // 
@@ -54,10 +49,14 @@ namespace CSCN72040_Project_Group11_ChoreMe
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Location = new Point(110, 59);
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(526, 392);
+            flowLayoutPanel1.Size = new Size(800, 450);
             flowLayoutPanel1.TabIndex = 1;
+            flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // button2

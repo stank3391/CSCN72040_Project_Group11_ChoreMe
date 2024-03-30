@@ -7,19 +7,32 @@ using System.Threading.Tasks;
 namespace ChoreMe
 {
     internal class ChoresPriorityIterator : Iterator<Chore>
-    {  
-        private Dictionary<int, List<Chore>> ChorePriority = new Dictionary<int, List<Chore>>();
+    {
+        public Dictionary<int, List<Chore>> ChorePriority;
         private int current = 1;        //Priority is 1-4
         private int currentChore = 0;
 
-        public Chore getNext()
+        public ChoresPriorityIterator(List<Chore> list)
         {
-            if (currentChore > ChorePriority[current].Count) {
+            ChorePriority = new Dictionary<int, List<Chore>>();
+            ChorePriority[1] = new List<Chore>();
+            ChorePriority[2] = new List<Chore>();
+            ChorePriority[3] = new List<Chore>();
+            ChorePriority[4] = new List<Chore>();
+            foreach (Chore chore in list)
+            {
+                ChorePriority[chore.Priority].Add(chore);
+            }
+        }
+
+        public Chore Next()
+        {
+            if (currentChore >= ChorePriority[current].Count -1) {
                 if (current < 4)
                 {
                     current++;
                     currentChore = 0;
-                    return getNext();
+                    return Next();
                 }
                 else
                 {
@@ -33,7 +46,7 @@ namespace ChoreMe
         }
         public bool hasNext()
         {
-            if (currentChore > ChorePriority[current].Count)
+            if (currentChore >= ChorePriority[current].Count -1)
             {
                 if (current < 4)
                 {

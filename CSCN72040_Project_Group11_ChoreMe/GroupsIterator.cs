@@ -12,7 +12,7 @@ namespace ChoreMe
         private int current = 0;
         GroupsIterator(List<Users> persons) => this.Persons = persons;
 
-        public Users getNext()
+        public Users Next()
         {
             return Persons[current++];
         }
