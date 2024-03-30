@@ -10,6 +10,6 @@ namespace ChoreMe
     {
         //public Iterator CreateIterator();
         public bool hasNext();
-        public T getNext();
+        public T Next();
     }
 }
