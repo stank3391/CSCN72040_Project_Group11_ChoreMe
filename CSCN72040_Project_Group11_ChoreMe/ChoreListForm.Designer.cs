@@ -31,7 +31,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
             button1 = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             button2 = new Button();
-            button3 = new Button();
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
@@ -69,15 +68,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
             button2.TabIndex = 2;
             button2.Text = "MyChores";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(145, 12);
-            button3.Name = "button3";
-            button3.Size = new Size(121, 29);
-            button3.TabIndex = 3;
-            button3.Text = "GroupChores";
-            button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -127,7 +117,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
-            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(button1);
@@ -141,7 +130,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
         private Button button1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button button2;
-        private Button button3;
         private Button button4;
         private Button button5;
         private Button button6;
