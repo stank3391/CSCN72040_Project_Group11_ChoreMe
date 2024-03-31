@@ -10,13 +10,18 @@ using System.Windows.Forms;
 
 namespace CSCN72040_Project_Group11_ChoreMe
 {
-    public partial class CalendarWeekForm : Form
+    public partial class CreateChoreForm : Form
     {
         public Form MainForm { get; set; }
-        public CalendarWeekForm(Form mainForm = null)
+        public CreateChoreForm(Form mainForm = null)
         {
             InitializeComponent();
             MainForm = mainForm;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)

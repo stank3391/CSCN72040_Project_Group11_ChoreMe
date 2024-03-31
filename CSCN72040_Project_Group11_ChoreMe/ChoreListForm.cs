@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChoreMe;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,11 @@ namespace CSCN72040_Project_Group11_ChoreMe
     public partial class ChoreListForm : Form
     {
         public Form MainForm { get; set; }
-        public ChoreListForm(Form mainForm = null)
+        CreateChoreForm CCForm = new CreateChoreForm();
+        private User myUser;
+
+
+        public ChoreListForm(Form mainForm = null, CreateChoreForm createForm = null)
         {
             InitializeComponent();
             MainForm = mainForm;
@@ -28,6 +33,7 @@ namespace CSCN72040_Project_Group11_ChoreMe
         {
             // Adjust the width of the FlowLayoutPanel to occupy half of the form's width
             flowLayoutPanel1.Width = this.ClientSize.Width / 2;
+            CCForm.MainForm = this;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,7 +44,7 @@ namespace CSCN72040_Project_Group11_ChoreMe
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -99,6 +105,18 @@ namespace CSCN72040_Project_Group11_ChoreMe
         {
             // Handle button click here
             MessageBox.Show("Button clicked!");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CCForm.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm.Show();
         }
     }
 }

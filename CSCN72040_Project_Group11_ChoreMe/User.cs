@@ -13,7 +13,7 @@ namespace ChoreMe
         creationdate
     }
     
-    internal class Users
+    internal class User
     {
         public string name { get; set; }
         public List<Chore> chores = new List<Chore>();
