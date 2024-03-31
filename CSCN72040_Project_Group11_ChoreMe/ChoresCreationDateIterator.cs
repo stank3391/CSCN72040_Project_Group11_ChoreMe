@@ -17,7 +17,7 @@ namespace ChoreMe
         }
         public Chore Next()
         {
-            return ChoreCreationDate[++current];
+            return ChoreCreationDate[current++];
         }
 
         public bool hasNext()

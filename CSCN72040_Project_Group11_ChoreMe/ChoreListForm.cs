@@ -57,20 +57,27 @@ namespace CSCN72040_Project_Group11_ChoreMe
 
             Iterator<Chore> myIterator = null;
             User user = new User();
+            user.addChore(new Chore("TEST1", "TEST DESC", 2, "TEST CAT2", DateTime.Now));
+            user.addChore(new Chore("TEST2", "TEST DESC", 1, "TEST CAT1", DateTime.Now));
+            user.addChore(new Chore("TEST3", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
 
-            switch (comboBox1.SelectedIndex.ToString())
+            switch (comboBox1.Text)
             {
                 case "Priority":
                     myIterator = new ChoresPriorityIterator(user.chores);
+                    Console.Out.WriteLine("Priority");
                     break;
                 case "Category":
                     myIterator = new ChoresCategoryIterator(user.chores);
+                    Console.Out.WriteLine("Category");
                     break;
                 case "Due Date":
                     myIterator = new ChoresDueDateIterator(user.chores);
+                    Console.Out.WriteLine("Due Date");
                     break;
                 case "Creation Date":
                     myIterator = new ChoresCreationDateIterator(user.chores);
+                    Console.Out.WriteLine("Creation Date");
                     break;
             }
 

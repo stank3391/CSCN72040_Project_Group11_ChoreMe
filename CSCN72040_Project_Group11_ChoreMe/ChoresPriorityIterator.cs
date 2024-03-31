@@ -15,10 +15,10 @@ namespace ChoreMe
         public ChoresPriorityIterator(List<Chore> list)
         {
             ChorePriority = new Dictionary<int, List<Chore>>();
-            ChorePriority[1] = new List<Chore>();
-            ChorePriority[2] = new List<Chore>();
-            ChorePriority[3] = new List<Chore>();
-            ChorePriority[4] = new List<Chore>();
+            ChorePriority.Add(1,  new List<Chore>());
+            ChorePriority.Add(2, new List<Chore>());
+            ChorePriority.Add(3, new List<Chore>());
+            ChorePriority.Add(4, new List<Chore>());
             foreach (Chore chore in list)
             {
                 ChorePriority[chore.Priority].Add(chore);
@@ -27,7 +27,7 @@ namespace ChoreMe
 
         public Chore Next()
         {
-            if (currentChore >= ChorePriority[current].Count -1) {
+            if (currentChore > ChorePriority[current].Count -1) {
                 if (current < 4)
                 {
                     current++;
@@ -46,7 +46,7 @@ namespace ChoreMe
         }
         public bool hasNext()
         {
-            if (currentChore >= ChorePriority[current].Count -1)
+            if (currentChore > ChorePriority[current].Count - 1)
             {
                 if (current < 4)
                 {
