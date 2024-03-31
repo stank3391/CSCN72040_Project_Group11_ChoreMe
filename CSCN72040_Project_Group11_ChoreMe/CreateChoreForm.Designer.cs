@@ -40,6 +40,8 @@
             comboBox2 = new ComboBox();
             label5 = new Label();
             textBox3 = new TextBox();
+            button3 = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -143,11 +145,31 @@
             textBox3.Size = new Size(125, 27);
             textBox3.TabIndex = 14;
             // 
+            // button3
+            // 
+            button3.Location = new Point(282, 369);
+            button3.Name = "button3";
+            button3.Size = new Size(68, 29);
+            button3.TabIndex = 15;
+            button3.Text = "Undo";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(356, 369);
+            button4.Name = "button4";
+            button4.Size = new Size(68, 29);
+            button4.TabIndex = 16;
+            button4.Text = "Redo";
+            button4.UseVisualStyleBackColor = true;
+            // 
             // CreateChoreForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button4);
+            Controls.Add(button3);
             Controls.Add(textBox3);
             Controls.Add(comboBox2);
             Controls.Add(label5);
@@ -180,5 +202,7 @@
         private ComboBox comboBox2;
         private Label label5;
         private TextBox textBox3;
+        private Button button3;
+        private Button button4;
     }
 }
