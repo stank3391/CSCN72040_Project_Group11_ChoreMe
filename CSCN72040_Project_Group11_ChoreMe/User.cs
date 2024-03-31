@@ -38,5 +38,10 @@ namespace ChoreMe
                     return null;
             }
         }
+
+        public void removeChore(Chore chore)
+        {
+            chores.Remove(chore);   
+        }
     }
 }

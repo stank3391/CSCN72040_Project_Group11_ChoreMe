@@ -27,9 +27,9 @@ namespace ChoreMe
         }
         public Chore Next()
         {
-            if (currentChore >= choreCategories[categoryKeys[currentCategory]].Count - 1)
+            if (currentChore > choreCategories[categoryKeys[currentCategory]].Count -1)
             {
-                if (currentCategory <= categoryKeys.Count - 1)
+                if (currentCategory > categoryKeys.Count -1)
                 {
                     currentCategory++;
                     currentChore = 0;
@@ -46,25 +46,44 @@ namespace ChoreMe
             }
         }
 
+        //public bool hasNext()
+        //{
+        //    if (currentChore > choreCategories[categoryKeys[currentCategory]].Count -1)
+        //    {
+        //        if (currentCategory > categoryKeys.Count - 1)
+        //        {
+        //            currentCategory++;
+        //            currentChore = 0;
+        //            return hasNext();
+        //        }
+        //        else
+        //        {
+        //            return false;    //OUT OF BOUNDS. 
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
+        //}
         public bool hasNext()
         {
-            if (currentChore >= choreCategories[categoryKeys[currentCategory]].Count - 1)
+            if (currentCategory > categoryKeys.Count - 1)
             {
-                if (currentCategory <= categoryKeys.Count - 1)
-                {
-                    currentCategory++;
-                    currentChore = 0;
-                    return hasNext();
-                }
-                else
-                {
-                    return false;    //OUT OF BOUNDS. 
-                }
+                return false; // No more categories left
+            }
+
+            if (currentChore > choreCategories[categoryKeys[currentCategory]].Count - 1)
+            {
+                currentCategory++;
+                currentChore = 0;
+                return hasNext(); // Check next category
             }
             else
             {
-                return true;
+                return true; // Chores left in current category
             }
         }
+
     }
 }
