@@ -12,11 +12,11 @@ namespace CSCN72040_Project_Group11_ChoreMe
 {
     public partial class CreateChoreForm : Form
     {
-        public Form MainForm { get; set; }
+        public Form ListForm { get; set; }
         public CreateChoreForm(Form mainForm = null)
         {
             InitializeComponent();
-            MainForm = mainForm;
+            ListForm = mainForm;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace CSCN72040_Project_Group11_ChoreMe
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainForm.Show();
+            ListForm.Show();
         }
     }
 }

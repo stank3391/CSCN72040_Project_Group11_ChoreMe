@@ -36,8 +36,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
             button5 = new Button();
             button6 = new Button();
             comboBox1 = new ComboBox();
-
-            button7 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -46,7 +44,7 @@ namespace CSCN72040_Project_Group11_ChoreMe
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 0;
-            button1.Text = "Back";
+            button1.Text = "Logout";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -104,7 +102,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
             // button6
             // 
             button6.Location = new Point(272, 12);
-
             button6.Name = "button6";
             button6.Size = new Size(121, 29);
             button6.TabIndex = 6;
@@ -120,15 +117,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
             comboBox1.Size = new Size(106, 28);
             comboBox1.TabIndex = 7;
             comboBox1.Text = "Priority";
-            // button7
-            // 
-            button7.Location = new Point(717, 14);
-            button7.Name = "button7";
-            button7.Size = new Size(71, 28);
-            button7.TabIndex = 7;
-            button7.Text = "Back";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
             // 
             // ChoreListForm
             // 
@@ -136,7 +124,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(817, 471);
             Controls.Add(comboBox1);
-            Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -159,6 +146,5 @@ namespace CSCN72040_Project_Group11_ChoreMe
         private Button button5;
         private Button button6;
         private ComboBox comboBox1;
-        private Button button7;
     }
 }

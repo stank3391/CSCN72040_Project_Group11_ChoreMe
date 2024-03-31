@@ -1,3 +1,5 @@
+using CSCN72030_group6;
+
 namespace CSCN72040_Project_Group11_ChoreMe
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace CSCN72040_Project_Group11_ChoreMe
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }

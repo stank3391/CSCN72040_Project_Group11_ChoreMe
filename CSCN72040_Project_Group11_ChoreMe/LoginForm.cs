@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using CSCN72040_Project_Group11_ChoreMe;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,25 +14,23 @@ namespace CSCN72030_group6
 {
     public partial class LoginForm : Form
     {
-        //public Credential CredTest { get; set; }
-        public Form MainForm { get; set; }
-        //public List<List<String>> Creds { get; set; }
+        public User CurUser { get; set; }
+        public ChoreListForm ChoreList = new ChoreListForm();
 
         //Put your object in here too
-        public LoginForm(Form form = null /*Credential credtest = null,*//* List<List<string>> creds = null*/)
+        public LoginForm(Form form = null, User u = null)
         {
-            MainForm = form;
-            //CredTest = credtest;
+            ChoreList.LogForm = this;
+            CurUser = u;
             InitializeComponent();
-            //Creds = creds;
         }
 
         private void login_Click(object sender, EventArgs e)
         {
             //temp code
             List<String> list = new List<String>();
-            list.Add("justin");
-            list.Add("password");
+            list.Add("");
+            list.Add("");
             List<List<String>> Creds = new List<List<String>>();
             Creds.Add(list);
 
@@ -44,7 +43,8 @@ namespace CSCN72030_group6
                 {
                     //create new credential
                     //Credential user;
-                    MainForm.Show();
+                    CurUser = new User();
+                    ChoreList.Show();
                     this.Hide();
                     found = true;
 

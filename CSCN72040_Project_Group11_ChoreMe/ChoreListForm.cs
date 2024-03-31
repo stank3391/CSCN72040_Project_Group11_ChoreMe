@@ -10,20 +10,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChoreMe;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using CSCN72030_group6;
 
 namespace CSCN72040_Project_Group11_ChoreMe
 {
     public partial class ChoreListForm : Form
     {
-        public Form MainForm { get; set; }
-        CreateChoreForm CCForm = new CreateChoreForm();
+        public LoginForm LogForm { get; set; }
+        public CreateChoreForm CCForm = new CreateChoreForm();
+        //CreateChoreForm CCForm = new CreateChoreForm();
         private User myUser;
 
 
-        public ChoreListForm(Form mainForm = null, CreateChoreForm createForm = null)
+        public ChoreListForm(LoginForm logForm = null)
         {
             InitializeComponent();
-            MainForm = mainForm;
+            LogForm = logForm;
+            CCForm.ListForm = this;
+
             //flowLayoutPanel1.Width = this.ClientSize.Width / 2;
 
             // Attach an event handler to resize the FlowLayoutPanel when the form is resized
@@ -33,13 +37,12 @@ namespace CSCN72040_Project_Group11_ChoreMe
         {
             // Adjust the width of the FlowLayoutPanel to occupy half of the form's width
             flowLayoutPanel1.Width = this.ClientSize.Width / 2;
-            CCForm.MainForm = this;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainForm.Show();
+            LogForm.Show();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -53,7 +56,7 @@ namespace CSCN72040_Project_Group11_ChoreMe
 
 
             Iterator<Chore> myIterator = null;
-            Users user = new Users();
+            User user = new User();
 
             switch (comboBox1.SelectedIndex.ToString())
             {
@@ -111,12 +114,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
         {
             this.Hide();
             CCForm.Show();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm.Show();
         }
     }
 }
