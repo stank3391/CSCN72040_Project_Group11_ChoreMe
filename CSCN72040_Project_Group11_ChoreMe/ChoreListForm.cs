@@ -30,7 +30,7 @@ namespace ChoreMe
             flowLayoutPanel1.Width = this.ClientSize.Width / 2;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void logoutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             LogForm.Show();
@@ -41,7 +41,7 @@ namespace ChoreMe
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void sortByButton_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
 
@@ -70,7 +70,7 @@ namespace ChoreMe
             //myUser.addChore(new Chore("TEST21", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
 
 
-            switch (comboBox1.Text)
+            switch (priorityComboBox.Text)
             {
                 case "Priority":
                     myIterator = new ChoresPriorityIterator(myUser.chores);
@@ -155,11 +155,11 @@ namespace ChoreMe
                 myUser.removeChore(chore);
                 MessageBox.Show("Chore removed: " + chore.Name);
                 // Optionally, you can refresh the list after removing the chore
-                button4_Click(sender, e);
+                sortByButton_Click(sender, e);
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void createChoreButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             CCForm.Show();

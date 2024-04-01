@@ -107,7 +107,7 @@
             createAccountButton.TabIndex = 3;
             createAccountButton.Text = "Create Account";
             createAccountButton.UseVisualStyleBackColor = true;
-            createAccountButton.Click += button1_Click;
+            createAccountButton.Click += createAccountButton_Click;
             // 
             // LoginForm
             // 
