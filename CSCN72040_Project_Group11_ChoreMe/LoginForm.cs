@@ -1,4 +1,4 @@
-﻿using CSCN72040_Project_Group11_ChoreMe;
+﻿using ChoreMe;
 using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
 using System;
@@ -11,19 +11,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSCN72030_group6
+namespace ChoreMe
 {
 
     public partial class LoginForm : Form
     {
-        public User CurUser { get; set; }
+        //public User CurUser { get; set; }
         public ChoreListForm ChoreList = new ChoreListForm();
 
         //Put your object in here too
-        public LoginForm(Form form = null, User u = null)
+        public LoginForm(Form form = null /*User u = null*/)
         {
             ChoreList.LogForm = this;
-            CurUser = u;
+            //CurUser = u;
             InitializeComponent();
         }
 
@@ -48,11 +48,13 @@ namespace CSCN72030_group6
                 {
                     //create new credential
                     //Credential user;
-                    CurUser = new User();
+                    User CurUser = new User(usernameBox.Text);
+                    //LoginInfo actual = new LoginInfo(loginInfo.username, loginInfo.password);
+                    //ChoreList.
+                    ChoreList.myUser = CurUser;
                     ChoreList.Show();
                     this.Hide();
                     found = true;
-
                 }
 
             }

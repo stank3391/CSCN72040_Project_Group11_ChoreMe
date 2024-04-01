@@ -1,4 +1,4 @@
-namespace CSCN72040_Project_Group11_ChoreMe
+namespace ChoreMe
 {
     partial class ChoreListForm
     {

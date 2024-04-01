@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    interface Iterator<T>
+    public interface Iterator<T>
     {
         //public Iterator CreateIterator();
         public bool hasNext();

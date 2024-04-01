@@ -1,4 +1,4 @@
-﻿namespace CSCN72040_Project_Group11_ChoreMe
+﻿namespace ChoreMe
 {
     partial class CreateChoreForm
     {
@@ -37,11 +37,11 @@
             label3 = new Label();
             dateTimePicker1 = new DateTimePicker();
             label4 = new Label();
-            comboBox2 = new ComboBox();
-            label5 = new Label();
             textBox3 = new TextBox();
             button3 = new Button();
             button4 = new Button();
+            label5 = new Label();
+            textBox4 = new TextBox();
             SuspendLayout();
             // 
             // textBox1
@@ -50,6 +50,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
@@ -69,6 +70,7 @@
             button2.TabIndex = 2;
             button2.Text = "Create";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // textBox2
             // 
@@ -121,23 +123,6 @@
             label4.TabIndex = 10;
             label4.Text = "Due Date";
             // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(152, 206);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 13;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(94, 209);
-            label5.Name = "label5";
-            label5.Size = new Size(52, 20);
-            label5.TabIndex = 12;
-            label5.Text = "Assign";
-            // 
             // textBox3
             // 
             textBox3.Location = new Point(152, 173);
@@ -163,15 +148,31 @@
             button4.Text = "Redo";
             button4.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(77, 209);
+            label5.Name = "label5";
+            label5.Size = new Size(69, 20);
+            label5.TabIndex = 12;
+            label5.Text = "Category";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(152, 212);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(125, 27);
+            textBox4.TabIndex = 17;
+            // 
             // CreateChoreForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox4);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(textBox3);
-            Controls.Add(comboBox2);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(dateTimePicker1);
@@ -199,10 +200,10 @@
         private Label label3;
         private DateTimePicker dateTimePicker1;
         private Label label4;
-        private ComboBox comboBox2;
-        private Label label5;
         private TextBox textBox3;
         private Button button3;
         private Button button4;
+        private Label label5;
+        private TextBox textBox4;
     }
 }

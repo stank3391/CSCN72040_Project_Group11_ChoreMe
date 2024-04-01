@@ -1,4 +1,4 @@
-﻿namespace CSCN72030_group6
+﻿namespace ChoreMe
 {
     partial class LoginForm
     {

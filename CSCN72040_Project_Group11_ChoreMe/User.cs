@@ -13,11 +13,14 @@ namespace ChoreMe
         creationdate
     }
     
-    internal class User
+    public class User
     {
         public string name { get; set; }
         public List<Chore> chores = new List<Chore>();
 
+        public User(string name) {
+            this.name = name;
+        }
         public void addChore(Chore chore)
         {
             chores.Add(chore);

@@ -1,6 +1,6 @@
-using CSCN72030_group6;
+using ChoreMe;
 
-namespace CSCN72040_Project_Group11_ChoreMe
+namespace ChoreMe
 {
     internal static class Program
     {

@@ -8,25 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ChoreMe;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-using CSCN72030_group6;
 
-namespace CSCN72040_Project_Group11_ChoreMe
+namespace ChoreMe
 {
     public partial class ChoreListForm : Form
     {
         public LoginForm LogForm { get; set; }
         public CreateChoreForm CCForm = new CreateChoreForm();
-        //CreateChoreForm CCForm = new CreateChoreForm();
-        private User myUser;
+        public User myUser { get; set; }
 
-
-        public ChoreListForm(LoginForm logForm = null)
+        public ChoreListForm(LoginForm logForm = null, User user = null)
         {
             InitializeComponent();
             LogForm = logForm;
             CCForm.ListForm = this;
+            myUser = user;
         }
         private void MainForm_Resize(object sender, EventArgs e)
         {
@@ -50,29 +47,27 @@ namespace CSCN72040_Project_Group11_ChoreMe
 
 
             Iterator<Chore> myIterator = null;
-                
-            User myUser = new User();                                                                       //DELETE THIS LINE WHEN FIXED!!!!!!                            
-            myUser.addChore(new Chore("TEST100", "TEST DESC", 2, "TEST CAT2", DateTime.Now));                   
-            myUser.addChore(new Chore("TEST2", "TEST DESC", 1, "TEST CAT1", DateTime.Now));                   
-            myUser.addChore(new Chore("TEST3", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST4", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST5", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST6", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST7", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST8", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST9", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST10", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST11", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST12", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST13", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST14", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST15", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST16", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST17", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST18", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST19", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST20", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
-            myUser.addChore(new Chore("TEST21", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST100", "TEST DESC", 2, "TEST CAT2", DateTime.Now));                   
+            //myUser.addChore(new Chore("TEST2", "TEST DESC", 1, "TEST CAT1", DateTime.Now));                   
+            //myUser.addChore(new Chore("TEST3", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST4", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST5", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST6", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST7", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST8", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST9", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST10", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST11", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST12", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST13", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST14", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST15", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST16", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST17", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST18", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST19", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST20", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
+            //myUser.addChore(new Chore("TEST21", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
 
 
             switch (comboBox1.Text)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class Memento
+    public class Memento
     {
         private string name;
         private string description;
