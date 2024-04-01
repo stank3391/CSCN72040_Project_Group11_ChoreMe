@@ -28,24 +28,25 @@ namespace CSCN72040_Project_Group11_ChoreMe
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            logoutButton = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            button2 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            comboBox1 = new ComboBox();
+            myChoresButton = new Button();
+            sortByButton = new Button();
+            createChoreButton = new Button();
+            completedButton = new Button();
+            priorityBox = new ComboBox();
             SuspendLayout();
             // 
-            // button1
+            // logoutButton
             // 
-            button1.Location = new Point(711, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            logoutButton.Location = new Point(622, 9);
+            logoutButton.Margin = new Padding(3, 2, 3, 2);
+            logoutButton.Name = "logoutButton";
+            logoutButton.Size = new Size(82, 22);
+            logoutButton.TabIndex = 0;
+            logoutButton.Text = "Logout";
+            logoutButton.UseVisualStyleBackColor = true;
+            logoutButton.Click += button1_Click;
             // 
             // flowLayoutPanel1
             // 
@@ -53,73 +54,80 @@ namespace CSCN72040_Project_Group11_ChoreMe
             flowLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             flowLayoutPanel1.Dock = DockStyle.Bottom;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 71);
+            flowLayoutPanel1.Location = new Point(0, 53);
+            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(817, 400);
+            flowLayoutPanel1.Size = new Size(715, 300);
             flowLayoutPanel1.TabIndex = 1;
             flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
-            // button2
+            // myChoresButton
             // 
-            button2.Location = new Point(31, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 2;
-            button2.Text = "MyChores";
-            button2.UseVisualStyleBackColor = true;
+            myChoresButton.Location = new Point(27, 9);
+            myChoresButton.Margin = new Padding(3, 2, 3, 2);
+            myChoresButton.Name = "myChoresButton";
+            myChoresButton.Size = new Size(82, 22);
+            myChoresButton.TabIndex = 2;
+            myChoresButton.Text = "MyChores";
+            myChoresButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // sortByButton
             // 
-            button4.Location = new Point(399, 12);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 29);
-            button4.TabIndex = 4;
-            button4.Text = "Sort By:";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            sortByButton.Location = new Point(349, 9);
+            sortByButton.Margin = new Padding(3, 2, 3, 2);
+            sortByButton.Name = "sortByButton";
+            sortByButton.Size = new Size(82, 22);
+            sortByButton.TabIndex = 4;
+            sortByButton.Text = "Sort By:";
+            sortByButton.UseVisualStyleBackColor = true;
+            sortByButton.Click += button4_Click;
             // 
-            // button5
+            // createChoreButton
             // 
-            button5.Location = new Point(611, 1);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 51);
-            button5.TabIndex = 5;
-            button5.Text = "Create Chore";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            createChoreButton.Location = new Point(535, 1);
+            createChoreButton.Margin = new Padding(3, 2, 3, 2);
+            createChoreButton.Name = "createChoreButton";
+            createChoreButton.Size = new Size(82, 38);
+            createChoreButton.TabIndex = 5;
+            createChoreButton.Text = "Create Chore";
+            createChoreButton.UseVisualStyleBackColor = true;
+            createChoreButton.Click += button5_Click;
             // 
-            // button6
+            // completedButton
             // 
-            button6.Location = new Point(272, 12);
-            button6.Name = "button6";
-            button6.Size = new Size(121, 29);
-            button6.TabIndex = 6;
-            button6.Text = "Completed";
-            button6.UseVisualStyleBackColor = true;
+            completedButton.Location = new Point(238, 9);
+            completedButton.Margin = new Padding(3, 2, 3, 2);
+            completedButton.Name = "completedButton";
+            completedButton.Size = new Size(106, 22);
+            completedButton.TabIndex = 6;
+            completedButton.Text = "Completed";
+            completedButton.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // priorityBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Priority", "Category", "Due Date", "Creation Date" });
-            comboBox1.Location = new Point(499, 12);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(106, 28);
-            comboBox1.TabIndex = 7;
-            comboBox1.Text = "Priority";
+            priorityBox.FormattingEnabled = true;
+            priorityBox.Items.AddRange(new object[] { "Priority", "Category", "Due Date", "Creation Date" });
+            priorityBox.Location = new Point(437, 9);
+            priorityBox.Margin = new Padding(3, 2, 3, 2);
+            priorityBox.Name = "priorityBox";
+            priorityBox.Size = new Size(93, 23);
+            priorityBox.TabIndex = 7;
+            priorityBox.Text = "Priority";
             // 
             // ChoreListForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(817, 471);
-            Controls.Add(comboBox1);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button2);
+            ClientSize = new Size(715, 353);
+            Controls.Add(priorityBox);
+            Controls.Add(completedButton);
+            Controls.Add(createChoreButton);
+            Controls.Add(sortByButton);
+            Controls.Add(myChoresButton);
             Controls.Add(flowLayoutPanel1);
-            Controls.Add(button1);
+            Controls.Add(logoutButton);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ChoreListForm";
             Text = "ChoreListForm";
             ResumeLayout(false);
@@ -127,12 +135,12 @@ namespace CSCN72040_Project_Group11_ChoreMe
 
         #endregion
 
-        private Button button1;
+        private Button logoutButton;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button button2;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private ComboBox comboBox1;
+        private Button myChoresButton;
+        private Button sortByButton;
+        private Button createChoreButton;
+        private Button completedButton;
+        private ComboBox priorityBox;
     }
 }

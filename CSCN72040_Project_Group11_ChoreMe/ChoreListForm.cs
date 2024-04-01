@@ -75,7 +75,7 @@ namespace CSCN72040_Project_Group11_ChoreMe
             myUser.addChore(new Chore("TEST21", "TEST DESC", 3, "TEST CAT2", DateTime.Now));
 
 
-            switch (comboBox1.Text)
+            switch (priorityBox.Text)
             {
                 case "Priority":
                     myIterator = new ChoresPriorityIterator(myUser.chores);
