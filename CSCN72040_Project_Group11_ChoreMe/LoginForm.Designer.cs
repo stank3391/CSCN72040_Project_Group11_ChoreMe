@@ -28,95 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             loginButton = new Button();
             usernameBox = new TextBox();
             passwordBox = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            usernameLabel = new Label();
+            passwordLabel = new Label();
             createAccountButton = new Button();
             SuspendLayout();
             // 
             // loginButton
             // 
-            loginButton.Location = new Point(334, 230);
-            loginButton.Margin = new Padding(3, 2, 3, 2);
+            resources.ApplyResources(loginButton, "loginButton");
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(82, 22);
-            loginButton.TabIndex = 2;
-            loginButton.Text = "Login";
             loginButton.UseVisualStyleBackColor = true;
             loginButton.Click += login_Click;
             // 
             // usernameBox
             // 
-            usernameBox.Location = new Point(256, 123);
-            usernameBox.Margin = new Padding(3, 2, 3, 2);
+            resources.ApplyResources(usernameBox, "usernameBox");
             usernameBox.Name = "usernameBox";
-            usernameBox.Size = new Size(236, 23);
-            usernameBox.TabIndex = 0;
             usernameBox.TextChanged += password_TextChanged;
             // 
             // passwordBox
             // 
-            passwordBox.Location = new Point(256, 158);
-            passwordBox.Margin = new Padding(3, 2, 3, 2);
+            resources.ApplyResources(passwordBox, "passwordBox");
             passwordBox.Name = "passwordBox";
-            passwordBox.Size = new Size(236, 23);
-            passwordBox.TabIndex = 1;
             // 
-            // label1
+            // usernameLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(183, 125);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Username:";
+            resources.ApplyResources(usernameLabel, "usernameLabel");
+            usernameLabel.Name = "usernameLabel";
             // 
-            // label2
+            // passwordLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(183, 160);
-            label2.Name = "label2";
-            label2.Size = new Size(60, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Password:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(256, 191);
-            label3.Name = "label3";
-            label3.Size = new Size(0, 15);
-            label3.TabIndex = 5;
+            resources.ApplyResources(passwordLabel, "passwordLabel");
+            passwordLabel.Name = "passwordLabel";
             // 
             // createAccountButton
             // 
-            createAccountButton.Location = new Point(305, 256);
-            createAccountButton.Margin = new Padding(3, 2, 3, 2);
+            resources.ApplyResources(createAccountButton, "createAccountButton");
             createAccountButton.Name = "createAccountButton";
-            createAccountButton.Size = new Size(149, 22);
-            createAccountButton.TabIndex = 3;
-            createAccountButton.Text = "Create Account";
             createAccountButton.UseVisualStyleBackColor = true;
             createAccountButton.Click += button1_Click;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
             Controls.Add(createAccountButton);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(passwordLabel);
+            Controls.Add(usernameLabel);
             Controls.Add(passwordBox);
             Controls.Add(usernameBox);
             Controls.Add(loginButton);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
-            Text = "CredentialFrom";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -126,9 +92,8 @@
         private TextBox usernameBox;
         private TextBox passwordBox;
         private Button loginButton;
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private Label usernameLabel;
+        private Label passwordLabel;
         private Button createAccountButton;
     }
 }
