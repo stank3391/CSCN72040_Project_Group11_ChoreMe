@@ -42,7 +42,7 @@
             resources.ApplyResources(loginButton, "loginButton");
             loginButton.Name = "loginButton";
             loginButton.UseVisualStyleBackColor = true;
-            loginButton.Click += login_Click;
+            loginButton.Click += loginButton_Click;
             // 
             // usernameBox
             // 
@@ -70,7 +70,7 @@
             resources.ApplyResources(createAccountButton, "createAccountButton");
             createAccountButton.Name = "createAccountButton";
             createAccountButton.UseVisualStyleBackColor = true;
-            createAccountButton.Click += button1_Click;
+            createAccountButton.Click += createAccountButton_Click;
             // 
             // LoginForm
             // 

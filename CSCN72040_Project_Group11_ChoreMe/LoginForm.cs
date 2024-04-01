@@ -27,7 +27,7 @@ namespace CSCN72030_group6
             InitializeComponent();
         }
 
-        private void login_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
             //List<LoginInfo> loginInfos = new List<LoginInfo>
             //{
@@ -72,7 +72,7 @@ namespace CSCN72030_group6
             passwordBox.UseSystemPasswordChar = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void createAccountButton_Click(object sender, EventArgs e)
         {
             string json = File.ReadAllText("../../../loginInfo.json");
             List<LoginInfo> jsonList = new List<LoginInfo>();
