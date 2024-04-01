@@ -74,6 +74,7 @@
             // 
             // LoginForm
             // 
+            AcceptButton = loginButton;
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(createAccountButton);
