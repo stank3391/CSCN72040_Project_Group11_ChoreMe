@@ -1,5 +1,6 @@
 ﻿using CSCN72040_Project_Group11_ChoreMe;
 using Microsoft.VisualBasic.ApplicationServices;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +13,7 @@ using System.Windows.Forms;
 
 namespace CSCN72030_group6
 {
+
     public partial class LoginForm : Form
     {
         public User CurUser { get; set; }
@@ -27,19 +29,22 @@ namespace CSCN72030_group6
 
         private void login_Click(object sender, EventArgs e)
         {
-            //temp code
-            List<String> list = new List<String>();
-            list.Add("");
-            list.Add("");
-            List<List<String>> Creds = new List<List<String>>();
-            Creds.Add(list);
+            //List<LoginInfo> loginInfos = new List<LoginInfo>
+            //{
+            //    new LoginInfo("", ""),
+            //    new LoginInfo("admin", "admin")
+            //};
+            //string jsontemp = JsonConvert.SerializeObject(loginInfos);
+            //File.WriteAllText("../../../loginInfo.json", jsontemp);
 
-
+            string json = File.ReadAllText("../../../loginInfo.json");
+            List<LoginInfo> jsonList = new List<LoginInfo>();
+            jsonList = JsonConvert.DeserializeObject<List<LoginInfo>>(json);
             //checking for match password
             bool found = false;
-            foreach (List<string> line in Creds)
+            foreach (LoginInfo loginInfo in jsonList)
             {
-                if (usernameBox.Text == line.ElementAt(0) && passwordBox.Text == line.ElementAt(1))
+                if (usernameBox.Text == loginInfo.username && passwordBox.Text == loginInfo.password)
                 {
                     //create new credential
                     //Credential user;
@@ -51,6 +56,7 @@ namespace CSCN72030_group6
                 }
 
             }
+
             if (!found)
             {
                 //if incorrect
@@ -65,5 +71,48 @@ namespace CSCN72030_group6
             passwordBox.ForeColor = Color.Black;
             passwordBox.UseSystemPasswordChar = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string json = File.ReadAllText("../../../loginInfo.json");
+            List<LoginInfo> jsonList = new List<LoginInfo>();
+            jsonList = JsonConvert.DeserializeObject<List<LoginInfo>>(json);
+            //checking for match password
+            bool found = false;
+            foreach (LoginInfo loginInfo in jsonList)
+            {
+                if (usernameBox.Text == loginInfo.username)
+                {
+                    MessageBox.Show("Account Already Exists", "Error");
+                    found = true;
+                }
+
+            }
+
+            if (!found)
+            {
+                //if not in DB
+                MessageBox.Show("You have successfully created an account. Please press Log In \\o/!", "Success!!");
+                jsonList.Add(new LoginInfo(usernameBox.Text, passwordBox.Text));
+            }
+
+            string jsontemp = JsonConvert.SerializeObject(jsonList);
+            File.WriteAllText("../../../loginInfo.json", jsontemp);
+        }
+    }
+
+
+    /// <summary>
+    /// AUXILIARY CLASS USED FOR LOGINS. ONLY USED WITH OUR DATABASE
+    /// </summary>
+    public class LoginInfo
+    {
+        public LoginInfo(string username, string password)
+        {
+            this.username = username;
+            this.password = password;
+        }
+        public string username { get; set; }
+        public string password { get; set; }
     }
 }
