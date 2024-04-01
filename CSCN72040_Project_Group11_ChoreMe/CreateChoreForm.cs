@@ -20,25 +20,20 @@ namespace ChoreMe
             ListForm = prevForm;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             ListForm.Show();
         }
 
         //create chore button
-        private void button2_Click(object sender, EventArgs e) {
+        private void createButton_Click(object sender, EventArgs e) {
             //add checks to make sure data is okay
-            String name = textBox1.Text;
-            String desc = textBox2.Text;
-            int prior = Int32.Parse(textBox3.Text);
-            String cat = textBox4.Text;
-            DateTime dueDate = dateTimePicker1.Value.Date;
+            String name = nameBox.Text;
+            String desc = descriptionBox.Text;
+            int prior = Int32.Parse(priorityBox.Text);
+            String cat = categoryBox.Text;
+            DateTime dueDate = dueDatePicker.Value.Date;
 
 
 
@@ -48,17 +43,12 @@ namespace ChoreMe
             ListForm.myUser.addChore(tempChore);
             
             //clear data
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            dateTimePicker1.Value = DateTime.Now;
+            nameBox.Text = "";
+            descriptionBox.Text = "";
+            priorityBox.Text = "";
+            categoryBox.Text = "";
+            dueDatePicker.Value = DateTime.Now;
             MessageBox.Show("Successfully added chore!", "Success");
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

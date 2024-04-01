@@ -31,85 +31,98 @@
             loginButton = new Button();
             usernameBox = new TextBox();
             passwordBox = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
+            usernameLabel = new Label();
+            passwordLabel = new Label();
             label3 = new Label();
-            button1 = new Button();
+            createAccountButton = new Button();
             SuspendLayout();
             // 
             // loginButton
             // 
-            loginButton.Location = new Point(382, 306);
+            loginButton.Anchor = AnchorStyles.None;
+            loginButton.Location = new Point(334, 230);
+            loginButton.Margin = new Padding(3, 2, 3, 2);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(94, 29);
-            loginButton.TabIndex = 0;
+            loginButton.Size = new Size(82, 22);
+            loginButton.TabIndex = 2;
             loginButton.Text = "Login";
             loginButton.UseVisualStyleBackColor = true;
             loginButton.Click += login_Click;
             // 
             // usernameBox
             // 
-            usernameBox.Location = new Point(293, 164);
+            usernameBox.Anchor = AnchorStyles.None;
+            usernameBox.Location = new Point(256, 122);
+            usernameBox.Margin = new Padding(3, 2, 3, 2);
             usernameBox.Name = "usernameBox";
-            usernameBox.Size = new Size(269, 27);
-            usernameBox.TabIndex = 2;
+            usernameBox.Size = new Size(236, 23);
+            usernameBox.TabIndex = 0;
             usernameBox.TextChanged += password_TextChanged;
             // 
             // passwordBox
             // 
-            passwordBox.Location = new Point(293, 211);
+            passwordBox.Anchor = AnchorStyles.None;
+            passwordBox.Location = new Point(256, 158);
+            passwordBox.Margin = new Padding(3, 2, 3, 2);
             passwordBox.Name = "passwordBox";
-            passwordBox.Size = new Size(269, 27);
+            passwordBox.Size = new Size(236, 23);
             passwordBox.TabIndex = 1;
             // 
-            // label1
+            // usernameLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(209, 167);
-            label1.Name = "label1";
-            label1.Size = new Size(78, 20);
-            label1.TabIndex = 3;
-            label1.Text = "Username:";
+            usernameLabel.Anchor = AnchorStyles.None;
+            usernameLabel.AutoSize = true;
+            usernameLabel.Location = new Point(183, 125);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new Size(63, 15);
+            usernameLabel.TabIndex = 3;
+            usernameLabel.Text = "Username:";
             // 
-            // label2
+            // passwordLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(209, 214);
-            label2.Name = "label2";
-            label2.Size = new Size(73, 20);
-            label2.TabIndex = 4;
-            label2.Text = "Password:";
+            passwordLabel.Anchor = AnchorStyles.None;
+            passwordLabel.AutoSize = true;
+            passwordLabel.Location = new Point(186, 161);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new Size(60, 15);
+            passwordLabel.TabIndex = 4;
+            passwordLabel.Text = "Password:";
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Location = new Point(293, 255);
+            label3.Location = new Point(256, 191);
             label3.Name = "label3";
-            label3.Size = new Size(0, 20);
+            label3.Size = new Size(0, 15);
             label3.TabIndex = 5;
             // 
-            // button1
+            // createAccountButton
             // 
-            button1.Location = new Point(349, 341);
-            button1.Name = "button1";
-            button1.Size = new Size(170, 29);
-            button1.TabIndex = 6;
-            button1.Text = "Create Account";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            createAccountButton.Anchor = AnchorStyles.None;
+            createAccountButton.Location = new Point(305, 256);
+            createAccountButton.Margin = new Padding(3, 2, 3, 2);
+            createAccountButton.Name = "createAccountButton";
+            createAccountButton.Size = new Size(149, 22);
+            createAccountButton.TabIndex = 3;
+            createAccountButton.Text = "Create Account";
+            createAccountButton.UseVisualStyleBackColor = true;
+            createAccountButton.Click += createAccountButton_Click;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AcceptButton = loginButton;
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(700, 338);
+            Controls.Add(createAccountButton);
             Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(passwordLabel);
+            Controls.Add(usernameLabel);
             Controls.Add(passwordBox);
             Controls.Add(usernameBox);
             Controls.Add(loginButton);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
             Text = "CredentialFrom";
             ResumeLayout(false);
@@ -121,9 +134,9 @@
         private Button loginButton;
         private TextBox usernameBox;
         private TextBox passwordBox;
-        private Label label1;
-        private Label label2;
+        private Label usernameLabel;
+        private Label passwordLabel;
         private Label label3;
-        private Button button1;
+        private Button createAccountButton;
     }
 }

@@ -74,7 +74,7 @@ namespace ChoreMe
             passwordBox.UseSystemPasswordChar = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void createAccountButton_Click(object sender, EventArgs e)
         {
             string json = File.ReadAllText("../../../loginInfo.json");
             List<LoginInfo> jsonList = new List<LoginInfo>();

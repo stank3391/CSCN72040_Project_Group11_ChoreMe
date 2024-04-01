@@ -28,161 +28,183 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            textBox2 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            label4 = new Label();
-            textBox3 = new TextBox();
-            button3 = new Button();
-            button4 = new Button();
-            label5 = new Label();
-            textBox4 = new TextBox();
+            nameBox = new TextBox();
+            backButton = new Button();
+            createButton = new Button();
+            descriptionBox = new TextBox();
+            nameLabel = new Label();
+            descriptionLabel = new Label();
+            priorityLabel = new Label();
+            dueDatePicker = new DateTimePicker();
+            dueDateLabel = new Label();
+            priorityBox = new TextBox();
+            undoButton = new Button();
+            redoButton = new Button();
+            categoryLabel = new Label();
+            categoryBox = new TextBox();
             SuspendLayout();
             // 
-            // textBox1
+            // nameBox
             // 
-            textBox1.Location = new Point(152, 103);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            nameBox.Anchor = AnchorStyles.None;
+            nameBox.Location = new Point(133, 77);
+            nameBox.Margin = new Padding(3, 2, 3, 2);
+            nameBox.Name = "nameBox";
+            nameBox.Size = new Size(110, 23);
+            nameBox.TabIndex = 0;
             // 
-            // button1
+            // backButton
             // 
-            button1.Location = new Point(660, 51);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            backButton.Anchor = AnchorStyles.None;
+            backButton.Location = new Point(578, 38);
+            backButton.Margin = new Padding(3, 2, 3, 2);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(82, 22);
+            backButton.TabIndex = 1;
+            backButton.Text = "Back";
+            backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
             // 
-            // button2
+            // createButton
             // 
-            button2.Location = new Point(660, 369);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 2;
-            button2.Text = "Create";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            createButton.Anchor = AnchorStyles.None;
+            createButton.Location = new Point(578, 277);
+            createButton.Margin = new Padding(3, 2, 3, 2);
+            createButton.Name = "createButton";
+            createButton.Size = new Size(82, 22);
+            createButton.TabIndex = 2;
+            createButton.Text = "Create";
+            createButton.UseVisualStyleBackColor = true;
+            createButton.Click += createButton_Click;
             // 
-            // textBox2
+            // descriptionBox
             // 
-            textBox2.Location = new Point(152, 136);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 3;
+            descriptionBox.Anchor = AnchorStyles.None;
+            descriptionBox.Location = new Point(133, 102);
+            descriptionBox.Margin = new Padding(3, 2, 3, 2);
+            descriptionBox.Name = "descriptionBox";
+            descriptionBox.Size = new Size(110, 23);
+            descriptionBox.TabIndex = 3;
             // 
-            // label1
+            // nameLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(97, 103);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 20);
-            label1.TabIndex = 5;
-            label1.Text = "Name";
+            nameLabel.Anchor = AnchorStyles.None;
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new Point(85, 77);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(39, 15);
+            nameLabel.TabIndex = 5;
+            nameLabel.Text = "Name";
             // 
-            // label2
+            // descriptionLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(61, 136);
-            label2.Name = "label2";
-            label2.Size = new Size(85, 20);
-            label2.TabIndex = 6;
-            label2.Text = "Description";
+            descriptionLabel.Anchor = AnchorStyles.None;
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new Point(53, 102);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new Size(67, 15);
+            descriptionLabel.TabIndex = 6;
+            descriptionLabel.Text = "Description";
             // 
-            // label3
+            // priorityLabel
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(90, 172);
-            label3.Name = "label3";
-            label3.Size = new Size(56, 20);
-            label3.TabIndex = 8;
-            label3.Text = "Priority";
-            label3.Click += label3_Click;
+            priorityLabel.Anchor = AnchorStyles.None;
+            priorityLabel.AutoSize = true;
+            priorityLabel.Location = new Point(79, 129);
+            priorityLabel.Name = "priorityLabel";
+            priorityLabel.Size = new Size(45, 15);
+            priorityLabel.TabIndex = 8;
+            priorityLabel.Text = "Priority";
             // 
-            // dateTimePicker1
+            // dueDatePicker
             // 
-            dateTimePicker1.Location = new Point(152, 245);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 9;
+            dueDatePicker.Anchor = AnchorStyles.None;
+            dueDatePicker.Location = new Point(133, 184);
+            dueDatePicker.Margin = new Padding(3, 2, 3, 2);
+            dueDatePicker.Name = "dueDatePicker";
+            dueDatePicker.Size = new Size(219, 23);
+            dueDatePicker.TabIndex = 9;
             // 
-            // label4
+            // dueDateLabel
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(74, 250);
-            label4.Name = "label4";
-            label4.Size = new Size(72, 20);
-            label4.TabIndex = 10;
-            label4.Text = "Due Date";
+            dueDateLabel.Anchor = AnchorStyles.None;
+            dueDateLabel.AutoSize = true;
+            dueDateLabel.Location = new Point(65, 188);
+            dueDateLabel.Name = "dueDateLabel";
+            dueDateLabel.Size = new Size(55, 15);
+            dueDateLabel.TabIndex = 10;
+            dueDateLabel.Text = "Due Date";
             // 
-            // textBox3
+            // priorityBox
             // 
-            textBox3.Location = new Point(152, 173);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 14;
+            priorityBox.Anchor = AnchorStyles.None;
+            priorityBox.Location = new Point(133, 130);
+            priorityBox.Margin = new Padding(3, 2, 3, 2);
+            priorityBox.Name = "priorityBox";
+            priorityBox.Size = new Size(110, 23);
+            priorityBox.TabIndex = 14;
             // 
-            // button3
+            // undoButton
             // 
-            button3.Location = new Point(282, 369);
-            button3.Name = "button3";
-            button3.Size = new Size(68, 29);
-            button3.TabIndex = 15;
-            button3.Text = "Undo";
-            button3.UseVisualStyleBackColor = true;
+            undoButton.Anchor = AnchorStyles.None;
+            undoButton.Location = new Point(247, 277);
+            undoButton.Margin = new Padding(3, 2, 3, 2);
+            undoButton.Name = "undoButton";
+            undoButton.Size = new Size(60, 22);
+            undoButton.TabIndex = 15;
+            undoButton.Text = "Undo";
+            undoButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // redoButton
             // 
-            button4.Location = new Point(356, 369);
-            button4.Name = "button4";
-            button4.Size = new Size(68, 29);
-            button4.TabIndex = 16;
-            button4.Text = "Redo";
-            button4.UseVisualStyleBackColor = true;
+            redoButton.Anchor = AnchorStyles.None;
+            redoButton.Location = new Point(312, 277);
+            redoButton.Margin = new Padding(3, 2, 3, 2);
+            redoButton.Name = "redoButton";
+            redoButton.Size = new Size(60, 22);
+            redoButton.TabIndex = 16;
+            redoButton.Text = "Redo";
+            redoButton.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // categoryLabel
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(77, 209);
-            label5.Name = "label5";
-            label5.Size = new Size(69, 20);
-            label5.TabIndex = 12;
-            label5.Text = "Category";
+            categoryLabel.Anchor = AnchorStyles.None;
+            categoryLabel.AutoSize = true;
+            categoryLabel.Location = new Point(67, 157);
+            categoryLabel.Name = "categoryLabel";
+            categoryLabel.Size = new Size(55, 15);
+            categoryLabel.TabIndex = 12;
+            categoryLabel.Text = "Category";
             // 
-            // textBox4
+            // categoryBox
             // 
-            textBox4.Location = new Point(152, 212);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 17;
+            categoryBox.Anchor = AnchorStyles.None;
+            categoryBox.Location = new Point(133, 159);
+            categoryBox.Margin = new Padding(3, 2, 3, 2);
+            categoryBox.Name = "categoryBox";
+            categoryBox.Size = new Size(110, 23);
+            categoryBox.TabIndex = 17;
             // 
             // CreateChoreForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox4);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(textBox3);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            ClientSize = new Size(700, 338);
+            Controls.Add(categoryBox);
+            Controls.Add(redoButton);
+            Controls.Add(undoButton);
+            Controls.Add(priorityBox);
+            Controls.Add(categoryLabel);
+            Controls.Add(dueDateLabel);
+            Controls.Add(dueDatePicker);
+            Controls.Add(priorityLabel);
+            Controls.Add(descriptionLabel);
+            Controls.Add(nameLabel);
+            Controls.Add(descriptionBox);
+            Controls.Add(createButton);
+            Controls.Add(backButton);
+            Controls.Add(nameBox);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "CreateChoreForm";
             Text = "CreateChoreForm";
             ResumeLayout(false);
@@ -191,19 +213,19 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox2;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private DateTimePicker dateTimePicker1;
-        private Label label4;
-        private TextBox textBox3;
-        private Button button3;
-        private Button button4;
-        private Label label5;
-        private TextBox textBox4;
+        private TextBox nameBox;
+        private Button backButton;
+        private Button createButton;
+        private TextBox descriptionBox;
+        private Label nameLabel;
+        private Label descriptionLabel;
+        private Label priorityLabel;
+        private DateTimePicker dueDatePicker;
+        private Label dueDateLabel;
+        private TextBox priorityBox;
+        private Button undoButton;
+        private Button redoButton;
+        private Label categoryLabel;
+        private TextBox categoryBox;
     }
 }
