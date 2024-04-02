@@ -16,6 +16,7 @@ namespace ChoreMe
         private string category;
         private DateTime dueDate;
         private DateTime creationDate;
+        private bool isComplete;
 
 
         public string Name { get { return name; } set { name = value; }}
@@ -24,6 +25,7 @@ namespace ChoreMe
         public string Category { get { return category; } set { category = value; } }
         public DateTime DueDate { get { return dueDate; } set { dueDate = value; } }
         public DateTime CreationDate { get { return creationDate; } set { creationDate = value; } }
+        public bool IsComplete { get { return isComplete; } set { isComplete = value; } }
 
         public void RegisterObserver(IChoreObserver observer)
         {
@@ -51,6 +53,7 @@ namespace ChoreMe
             this.Category = cat;
             this.DueDate = due;
             this.CreationDate = DateTime.Now;
+            this.isComplete = false;
         }
 
         /// <summary>
@@ -61,7 +64,7 @@ namespace ChoreMe
         /// <summary>
         /// for json deserialization
         /// </summary>
-        public Chore(string name, string description, int priority, string category, DateTime dueDate, DateTime creationDate)
+        public Chore(string name, string description, int priority, string category, DateTime dueDate, DateTime creationDate, bool isComplete)
         {
             this.creationDate = creationDate;
             Name = name;
@@ -70,6 +73,7 @@ namespace ChoreMe
             Category = category;
             DueDate = dueDate;
             CreationDate = creationDate;
+            this.isComplete = isComplete;
         }
 
         public Chore(Memento m)
@@ -90,6 +94,11 @@ namespace ChoreMe
         public Chore RestoreFromMemento(Memento m)
         {
             return new Chore(m);
+        }
+
+        public void Complete()
+        {
+            isComplete = true;
         }
     }
 }

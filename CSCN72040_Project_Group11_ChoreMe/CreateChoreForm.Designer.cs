@@ -38,8 +38,6 @@
             dueDatePicker = new DateTimePicker();
             dueDateLabel = new Label();
             priorityBox = new TextBox();
-            undoButton = new Button();
-            redoButton = new Button();
             categoryLabel = new Label();
             categoryBox = new TextBox();
             SuspendLayout();
@@ -47,19 +45,17 @@
             // nameBox
             // 
             nameBox.Anchor = AnchorStyles.None;
-            nameBox.Location = new Point(133, 77);
-            nameBox.Margin = new Padding(3, 2, 3, 2);
+            nameBox.Location = new Point(152, 103);
             nameBox.Name = "nameBox";
-            nameBox.Size = new Size(110, 23);
+            nameBox.Size = new Size(125, 27);
             nameBox.TabIndex = 0;
             // 
             // backButton
             // 
             backButton.Anchor = AnchorStyles.None;
-            backButton.Location = new Point(578, 38);
-            backButton.Margin = new Padding(3, 2, 3, 2);
+            backButton.Location = new Point(661, 51);
             backButton.Name = "backButton";
-            backButton.Size = new Size(82, 22);
+            backButton.Size = new Size(94, 29);
             backButton.TabIndex = 1;
             backButton.Text = "Back";
             backButton.UseVisualStyleBackColor = true;
@@ -68,10 +64,9 @@
             // createButton
             // 
             createButton.Anchor = AnchorStyles.None;
-            createButton.Location = new Point(578, 277);
-            createButton.Margin = new Padding(3, 2, 3, 2);
+            createButton.Location = new Point(661, 369);
             createButton.Name = "createButton";
-            createButton.Size = new Size(82, 22);
+            createButton.Size = new Size(94, 29);
             createButton.TabIndex = 2;
             createButton.Text = "Create";
             createButton.UseVisualStyleBackColor = true;
@@ -80,19 +75,18 @@
             // descriptionBox
             // 
             descriptionBox.Anchor = AnchorStyles.None;
-            descriptionBox.Location = new Point(133, 102);
-            descriptionBox.Margin = new Padding(3, 2, 3, 2);
+            descriptionBox.Location = new Point(152, 136);
             descriptionBox.Name = "descriptionBox";
-            descriptionBox.Size = new Size(110, 23);
+            descriptionBox.Size = new Size(125, 27);
             descriptionBox.TabIndex = 3;
             // 
             // nameLabel
             // 
             nameLabel.Anchor = AnchorStyles.None;
             nameLabel.AutoSize = true;
-            nameLabel.Location = new Point(85, 77);
+            nameLabel.Location = new Point(97, 103);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(39, 15);
+            nameLabel.Size = new Size(49, 20);
             nameLabel.TabIndex = 5;
             nameLabel.Text = "Name";
             // 
@@ -100,9 +94,9 @@
             // 
             descriptionLabel.Anchor = AnchorStyles.None;
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new Point(53, 102);
+            descriptionLabel.Location = new Point(61, 136);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new Size(67, 15);
+            descriptionLabel.Size = new Size(85, 20);
             descriptionLabel.TabIndex = 6;
             descriptionLabel.Text = "Description";
             // 
@@ -110,89 +104,62 @@
             // 
             priorityLabel.Anchor = AnchorStyles.None;
             priorityLabel.AutoSize = true;
-            priorityLabel.Location = new Point(79, 129);
+            priorityLabel.Location = new Point(90, 172);
             priorityLabel.Name = "priorityLabel";
-            priorityLabel.Size = new Size(45, 15);
+            priorityLabel.Size = new Size(56, 20);
             priorityLabel.TabIndex = 8;
             priorityLabel.Text = "Priority";
             // 
             // dueDatePicker
             // 
             dueDatePicker.Anchor = AnchorStyles.None;
-            dueDatePicker.Location = new Point(133, 184);
-            dueDatePicker.Margin = new Padding(3, 2, 3, 2);
+            dueDatePicker.Location = new Point(152, 245);
             dueDatePicker.Name = "dueDatePicker";
-            dueDatePicker.Size = new Size(219, 23);
+            dueDatePicker.Size = new Size(250, 27);
             dueDatePicker.TabIndex = 9;
             // 
             // dueDateLabel
             // 
             dueDateLabel.Anchor = AnchorStyles.None;
             dueDateLabel.AutoSize = true;
-            dueDateLabel.Location = new Point(65, 188);
+            dueDateLabel.Location = new Point(74, 251);
             dueDateLabel.Name = "dueDateLabel";
-            dueDateLabel.Size = new Size(55, 15);
+            dueDateLabel.Size = new Size(72, 20);
             dueDateLabel.TabIndex = 10;
             dueDateLabel.Text = "Due Date";
             // 
             // priorityBox
             // 
             priorityBox.Anchor = AnchorStyles.None;
-            priorityBox.Location = new Point(133, 130);
-            priorityBox.Margin = new Padding(3, 2, 3, 2);
+            priorityBox.Location = new Point(152, 173);
             priorityBox.Name = "priorityBox";
-            priorityBox.Size = new Size(110, 23);
+            priorityBox.Size = new Size(125, 27);
             priorityBox.TabIndex = 14;
-            // 
-            // undoButton
-            // 
-            undoButton.Anchor = AnchorStyles.None;
-            undoButton.Location = new Point(247, 277);
-            undoButton.Margin = new Padding(3, 2, 3, 2);
-            undoButton.Name = "undoButton";
-            undoButton.Size = new Size(60, 22);
-            undoButton.TabIndex = 15;
-            undoButton.Text = "Undo";
-            undoButton.UseVisualStyleBackColor = true;
-            // 
-            // redoButton
-            // 
-            redoButton.Anchor = AnchorStyles.None;
-            redoButton.Location = new Point(312, 277);
-            redoButton.Margin = new Padding(3, 2, 3, 2);
-            redoButton.Name = "redoButton";
-            redoButton.Size = new Size(60, 22);
-            redoButton.TabIndex = 16;
-            redoButton.Text = "Redo";
-            redoButton.UseVisualStyleBackColor = true;
             // 
             // categoryLabel
             // 
             categoryLabel.Anchor = AnchorStyles.None;
             categoryLabel.AutoSize = true;
-            categoryLabel.Location = new Point(67, 157);
+            categoryLabel.Location = new Point(77, 209);
             categoryLabel.Name = "categoryLabel";
-            categoryLabel.Size = new Size(55, 15);
+            categoryLabel.Size = new Size(69, 20);
             categoryLabel.TabIndex = 12;
             categoryLabel.Text = "Category";
             // 
             // categoryBox
             // 
             categoryBox.Anchor = AnchorStyles.None;
-            categoryBox.Location = new Point(133, 159);
-            categoryBox.Margin = new Padding(3, 2, 3, 2);
+            categoryBox.Location = new Point(152, 212);
             categoryBox.Name = "categoryBox";
-            categoryBox.Size = new Size(110, 23);
+            categoryBox.Size = new Size(125, 27);
             categoryBox.TabIndex = 17;
             // 
             // CreateChoreForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(800, 451);
             Controls.Add(categoryBox);
-            Controls.Add(redoButton);
-            Controls.Add(undoButton);
             Controls.Add(priorityBox);
             Controls.Add(categoryLabel);
             Controls.Add(dueDateLabel);
@@ -204,7 +171,6 @@
             Controls.Add(createButton);
             Controls.Add(backButton);
             Controls.Add(nameBox);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "CreateChoreForm";
             Text = "CreateChoreForm";
             ResumeLayout(false);
@@ -223,8 +189,6 @@
         private DateTimePicker dueDatePicker;
         private Label dueDateLabel;
         private TextBox priorityBox;
-        private Button undoButton;
-        private Button redoButton;
         private Label categoryLabel;
         private TextBox categoryBox;
     }

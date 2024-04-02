@@ -30,11 +30,11 @@ namespace ChoreMe
         {
             logoutButton = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            myChoresButton = new Button();
-            sortByButton = new Button();
             createChoreButton = new Button();
-            completedButton = new Button();
-            priorityComboBox = new ComboBox();
+            sortByComboBox = new ComboBox();
+            choresStatusComboBox = new ComboBox();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // logoutButton
@@ -61,30 +61,6 @@ namespace ChoreMe
             flowLayoutPanel1.Size = new Size(715, 300);
             flowLayoutPanel1.TabIndex = 1;
             flowLayoutPanel1.WrapContents = false;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
-            // 
-            // myChoresButton
-            // 
-            myChoresButton.Anchor = AnchorStyles.Top;
-            myChoresButton.Location = new Point(27, 9);
-            myChoresButton.Margin = new Padding(3, 2, 3, 2);
-            myChoresButton.Name = "myChoresButton";
-            myChoresButton.Size = new Size(82, 22);
-            myChoresButton.TabIndex = 2;
-            myChoresButton.Text = "MyChores";
-            myChoresButton.UseVisualStyleBackColor = true;
-            // 
-            // sortByButton
-            // 
-            sortByButton.Anchor = AnchorStyles.Top;
-            sortByButton.Location = new Point(349, 9);
-            sortByButton.Margin = new Padding(3, 2, 3, 2);
-            sortByButton.Name = "sortByButton";
-            sortByButton.Size = new Size(82, 22);
-            sortByButton.TabIndex = 4;
-            sortByButton.Text = "Sort By:";
-            sortByButton.UseVisualStyleBackColor = true;
-            sortByButton.Click += sortByButton_Click;
             // 
             // createChoreButton
             // 
@@ -98,55 +74,75 @@ namespace ChoreMe
             createChoreButton.UseVisualStyleBackColor = true;
             createChoreButton.Click += createChoreButton_Click;
             // 
-            // completedButton
+            // sortByComboBox
             // 
-            completedButton.Anchor = AnchorStyles.Top;
-            completedButton.Location = new Point(238, 9);
-            completedButton.Margin = new Padding(3, 2, 3, 2);
-            completedButton.Name = "completedButton";
-            completedButton.Size = new Size(106, 22);
-            completedButton.TabIndex = 6;
-            completedButton.Text = "Completed";
-            completedButton.UseVisualStyleBackColor = true;
+            sortByComboBox.Anchor = AnchorStyles.Top;
+            sortByComboBox.FormattingEnabled = true;
+            sortByComboBox.Items.AddRange(new object[] { "Priority", "Category", "Due Date", "Creation Date" });
+            sortByComboBox.Location = new Point(437, 9);
+            sortByComboBox.Margin = new Padding(3, 2, 3, 2);
+            sortByComboBox.Name = "sortByComboBox";
+            sortByComboBox.Size = new Size(93, 23);
+            sortByComboBox.TabIndex = 7;
+            sortByComboBox.Text = "Priority";
+            sortByComboBox.SelectedIndexChanged += sortByComboBox_SelectedIndexChanged;
             // 
-            // priorityComboBox
+            // choresStatusComboBox
             // 
-            priorityComboBox.Anchor = AnchorStyles.Top;
-            priorityComboBox.FormattingEnabled = true;
-            priorityComboBox.Items.AddRange(new object[] { "Priority", "Category", "Due Date", "Creation Date" });
-            priorityComboBox.Location = new Point(437, 9);
-            priorityComboBox.Margin = new Padding(3, 2, 3, 2);
-            priorityComboBox.Name = "priorityComboBox";
-            priorityComboBox.Size = new Size(93, 23);
-            priorityComboBox.TabIndex = 7;
-            priorityComboBox.Text = "Priority";
+            choresStatusComboBox.FormattingEnabled = true;
+            choresStatusComboBox.Items.AddRange(new object[] { "All", "Incompleted", "Completed" });
+            choresStatusComboBox.Location = new Point(131, 10);
+            choresStatusComboBox.Name = "choresStatusComboBox";
+            choresStatusComboBox.Size = new Size(121, 23);
+            choresStatusComboBox.TabIndex = 8;
+            choresStatusComboBox.Text = "All";
+            choresStatusComboBox.SelectedIndexChanged += choresStatusComboBox_SelectedIndexChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(63, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(67, 15);
+            label1.TabIndex = 9;
+            label1.Text = "My Chores:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(384, 13);
+            label2.Name = "label2";
+            label2.Size = new Size(47, 15);
+            label2.TabIndex = 10;
+            label2.Text = "Sort By:";
             // 
             // ChoreListForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(715, 353);
-            Controls.Add(priorityComboBox);
-            Controls.Add(completedButton);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(choresStatusComboBox);
+            Controls.Add(sortByComboBox);
             Controls.Add(createChoreButton);
-            Controls.Add(sortByButton);
-            Controls.Add(myChoresButton);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(logoutButton);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ChoreListForm";
             Text = "ChoreListForm";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button logoutButton;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button myChoresButton;
-        private Button sortByButton;
         private Button createChoreButton;
-        private Button completedButton;
-        private ComboBox priorityComboBox;
+        private ComboBox sortByComboBox;
+        private ComboBox choresStatusComboBox;
+        private Label label1;
+        private Label label2;
     }
 }

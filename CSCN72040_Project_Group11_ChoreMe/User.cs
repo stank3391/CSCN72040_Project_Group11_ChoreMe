@@ -11,7 +11,9 @@ namespace ChoreMe
         priority,
         category,
         duedate,
-        creationdate
+        creationdate,
+        completed,
+        incompleted
     }
     
     public class User : Aggregate<Chore>
@@ -45,6 +47,10 @@ namespace ChoreMe
                     return new ChoresDueDateIterator(chores);
                 case IteratorType.creationdate:
                     return new ChoresCreationDateIterator(chores);
+                case IteratorType.completed:
+                    return new ChoresCompletedIterator(chores);
+                case IteratorType.incompleted:
+                    return new ChoresIncompletedIterator(chores);
                 default:
                     return null;
             }
@@ -53,6 +59,48 @@ namespace ChoreMe
         public void removeChore(Chore chore)
         {
             chores.Remove(chore);   
+        }
+
+        public List<Chore> getAllChores()
+        {
+            List<Chore> allChores = new List<Chore>();
+
+            foreach (Chore chore in chores)
+            {
+                allChores.Add(chore);
+            }
+
+            return allChores;
+        }
+
+        public List<Chore> getCompletedChores()
+        {
+            IteratorType type = IteratorType.completed;
+            Iterator<Chore> myIterator = createIterator(type);
+
+            List<Chore> completedChores = new List<Chore>();
+
+            while (myIterator.hasNext())
+            {
+                completedChores.Add(myIterator.Next());
+            }
+
+            return completedChores;
+        }
+
+        public List<Chore> getIncompletedChores()
+        {
+            IteratorType type = IteratorType.incompleted;
+            Iterator<Chore> myIterator = createIterator(type);
+
+            List<Chore> incompletedChores = new List<Chore>();
+
+            while (myIterator.hasNext())
+            {
+                incompletedChores.Add(myIterator.Next());
+            }
+
+            return incompletedChores;
         }
     }
 }

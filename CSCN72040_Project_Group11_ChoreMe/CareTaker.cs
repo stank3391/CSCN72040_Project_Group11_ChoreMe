@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChoreMe
 {
-    internal class CareTaker
+    public class CareTaker
     {
         private List<Memento> savedChores = new List<Memento>();
         public List<Memento> SavedChores { get { return savedChores; } set { savedChores = value; } }

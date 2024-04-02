@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ChoreMe;
 
-namespace CSCN72040_Project_Group11_ChoreMe
+namespace ChoreMe
 {
     internal class ChoreListIterator : Iterator<Chore>
     {

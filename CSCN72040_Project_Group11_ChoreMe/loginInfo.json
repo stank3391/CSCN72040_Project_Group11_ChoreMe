@@ -1,1 +1,101 @@
-[{"username":"","password":"","chores":[{"Name":"TEST100","Description":"TEST DESC","Priority":2,"Category":"TEST CAT2","DueDate":"2024-04-01T20:27:41.7466636-04:00","CreationDate":"2024-04-01T20:27:41.746907-04:00"},{"Name":"TEST2","Description":"TEST DESC","Priority":1,"Category":"TEST CAT1","DueDate":"2024-04-01T20:27:41.7469465-04:00","CreationDate":"2024-04-01T20:27:41.7469481-04:00"},{"Name":"dfg","Description":"","Priority":4,"Category":"","DueDate":"2024-04-01T00:00:00-04:00","CreationDate":"2024-04-01T21:26:56.832243-04:00"}]},{"username":"admin","password":"admin","chores":[{"Name":"TEST100","Description":"TEST DESC","Priority":2,"Category":"TEST CAT2","DueDate":"2024-04-01T20:27:41.7466636-04:00","CreationDate":"2024-04-01T20:27:41.746907-04:00"},{"Name":"TEST2","Description":"TEST DESC","Priority":1,"Category":"TEST CAT1","DueDate":"2024-04-01T20:27:41.7469465-04:00","CreationDate":"2024-04-01T20:27:41.7469481-04:00"}]},{"username":"joe","password":"mama","chores":[{"Name":"Never gona","Description":"give you up","Priority":4,"Category":"rick","DueDate":"2024-04-02T00:00:00","CreationDate":"2024-04-01T20:57:03.5641093-04:00"}]}]
+[
+  {
+    "username": "",
+    "password": "",
+    "chores": [
+      {
+        "Name": "TEST100",
+        "Description": "TEST DESC",
+        "Priority": 2,
+        "Category": "TEST CAT2",
+        "DueDate": "2024-04-01T20:27:41.7466636-04:00",
+        "CreationDate": "2024-04-01T20:27:41.746907-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "TEST2",
+        "Description": "TEST DESC",
+        "Priority": 1,
+        "Category": "TEST CAT1",
+        "DueDate": "2024-04-01T20:27:41.7469465-04:00",
+        "CreationDate": "2024-04-01T20:27:41.7469481-04:00",
+        "IsComplete": true
+      },
+      {
+        "Name": "dfg",
+        "Description": "",
+        "Priority": 4,
+        "Category": "",
+        "DueDate": "2024-04-01T00:00:00-04:00",
+        "CreationDate": "2024-04-01T21:26:56.832243-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "test",
+        "Description": "123",
+        "Priority": 1,
+        "Category": "12312312312",
+        "DueDate": "2024-04-02T00:00:00-04:00",
+        "CreationDate": "2024-04-02T04:09:16.1569637-04:00",
+        "IsComplete": true
+      },
+      {
+        "Name": "gang",
+        "Description": "12312",
+        "Priority": 4,
+        "Category": "123",
+        "DueDate": "2024-04-02T00:00:00-04:00",
+        "CreationDate": "2024-04-02T05:59:03.1683605-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "idk",
+        "Description": "123123123213",
+        "Priority": 1,
+        "Category": "idk",
+        "DueDate": "2024-04-02T00:00:00-04:00",
+        "CreationDate": "2024-04-02T06:14:27.0629274-04:00",
+        "IsComplete": true
+      }
+    ]
+  },
+  {
+    "username": "admin",
+    "password": "admin",
+    "chores": [
+      {
+        "Name": "TEST100",
+        "Description": "TEST DESC",
+        "Priority": 2,
+        "Category": "TEST CAT2",
+        "DueDate": "2024-04-01T20:27:41.7466636-04:00",
+        "CreationDate": "2024-04-01T20:27:41.746907-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "TEST2",
+        "Description": "TEST DESC",
+        "Priority": 1,
+        "Category": "TEST CAT1",
+        "DueDate": "2024-04-01T20:27:41.7469465-04:00",
+        "CreationDate": "2024-04-01T20:27:41.7469481-04:00",
+        "IsComplete": false
+      }
+    ]
+  },
+  {
+    "username": "joe",
+    "password": "mama",
+    "chores": [
+      {
+        "Name": "Never gona",
+        "Description": "give you up",
+        "Priority": 4,
+        "Category": "rick",
+        "DueDate": "2024-04-02T00:00:00",
+        "CreationDate": "2024-04-01T20:57:03.5641093-04:00",
+        "IsComplete": false
+      }
+    ]
+  }
+]
