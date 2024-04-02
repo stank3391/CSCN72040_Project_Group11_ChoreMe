@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ChoreMe
 {
@@ -42,6 +43,10 @@ namespace ChoreMe
 
         private void createButton_Click(object sender, EventArgs e)
         {
+
+            int prior = Int32.Parse(priorityComboBox.Text); //this can break code
+
+
             //if okay
             if (nameBox.Text == "")
             {
@@ -50,6 +55,10 @@ namespace ChoreMe
             else if (categoryBox.Text == "")
             {
                 MessageBox.Show("Category cannot be empty!");
+            }
+            else if (1 > prior && prior < 4)
+            {
+                MessageBox.Show("Priority has to be within 1-4!");
             }
             else
             {

@@ -38,7 +38,7 @@ namespace ChoreMe
             //add checks to make sure data is okay
             String name = nameBox.Text;
             String desc = descriptionBox.Text;
-            int prior = Int32.Parse(priorityComboBox.Text);
+            int prior = Int32.Parse(priorityComboBox.Text); //this can break code
             String cat = categoryBox.Text;
             DateTime dueDate = dueDatePicker.Value.Date;
 
@@ -50,6 +50,10 @@ namespace ChoreMe
             else if (categoryBox.Text == "")
             {
                 MessageBox.Show("Category cannot be empty!");
+            }
+            else if (1 > prior && prior < 4)
+            {
+                MessageBox.Show("Priority has to be within 1-4!");
             }
             else
             {
