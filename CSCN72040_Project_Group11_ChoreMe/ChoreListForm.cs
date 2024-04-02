@@ -1,4 +1,5 @@
 ﻿using ChoreMe;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace ChoreMe
 {
@@ -16,7 +18,9 @@ namespace ChoreMe
     {
         public LoginForm LogForm { get; set; }
         public CreateChoreForm CCForm = new CreateChoreForm();
+        public EditChoreForm ECForm;
         public User myUser { get; set; }
+        //public Chore CurChore { get; set; }
 
         public ChoreListForm(LoginForm logForm = null, User user = null)
         {
@@ -24,6 +28,11 @@ namespace ChoreMe
             LogForm = logForm;
             CCForm.ListForm = this;
             myUser = user;
+            //ECForm.ListForm = this;
+            //ECForm.myChore = new Chore("test", "test", 3, "test", DateTime.Now);
+            //ECForm.CurChore.Name = "test";
+
+            //ECForm.editChore = new Chore("", "", -1, "", DateTime.Now);
         }
         private void MainForm_Resize(object sender, EventArgs e)
         {
@@ -116,6 +125,14 @@ namespace ChoreMe
                 itemButton.Dock = DockStyle.Right; // Align button to the right
                 itemPanel.Controls.Add(itemButton);
 
+                // Create a button
+                Button editButton = new Button();
+                editButton.Text = "Edit";
+                editButton.Tag = chore;
+                editButton.Click += EditButton_Click; // Add event handler for button click
+                editButton.Dock = DockStyle.Right; // Align button to the right
+                itemPanel.Controls.Add(editButton);
+
                 // Create a button to remove chore
                 Button removeButton = new Button();
                 removeButton.Text = "Remove";
@@ -142,6 +159,23 @@ namespace ChoreMe
             else
             {
                 MessageBox.Show("Chore Name: " + chore.Name + "\nChore Description: " + chore.Description + "\nChore Category: " + chore.Category + "\nChore Priority: " + chore.Priority + "\nChore Due Date: " + chore.DueDate + "\nChore Creation Date:" + chore.CreationDate);
+            }
+        }
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            // Handle remove button click here
+            Button clickedButton = (Button)sender;
+            Chore chore = (Chore)clickedButton.Tag;
+            if (chore != null)
+            {
+                //CurChore = chore;
+                ECForm = new EditChoreForm(this, chore);
+                this.Hide();
+                ECForm.Show();
+                //ECForm.
+                //MessageBox.Show("Chore removed: " + chore.Name);
+                // Optionally, you can refresh the list after removing the chore
+                //sortByButton_Click(sender, e);
             }
         }
 

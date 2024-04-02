@@ -56,7 +56,6 @@ namespace ChoreMe
                     this.Hide();
                     found = true;
                 }
-
             }
 
             if (!found)

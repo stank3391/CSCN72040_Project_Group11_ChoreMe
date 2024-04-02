@@ -22,6 +22,11 @@ namespace ChoreMe
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            nameBox.Text = "";
+            descriptionBox.Text = "";
+            priorityBox.Text = "";
+            categoryBox.Text = "";
+            dueDatePicker.Value = DateTime.Now;
             this.Hide();
             ListForm.Show();
         }
@@ -41,7 +46,7 @@ namespace ChoreMe
             //if data is okay
             Chore tempChore = new Chore(name, desc, prior, cat, dueDate);
             ListForm.myUser.addChore(tempChore);
-            
+
             //clear data
             nameBox.Text = "";
             descriptionBox.Text = "";
