@@ -41,7 +41,7 @@ namespace ChoreMe
         {
             foreach (var observer in observers)
             {
-                observer.NotifyChoreCreated(message);
+                observer.Update(message);
             }
         }
 

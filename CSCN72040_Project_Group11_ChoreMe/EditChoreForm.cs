@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSCN72040_Project_Group11_ChoreMe;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +50,7 @@ namespace ChoreMe
             myChore.DueDate = dueDatePicker.Value;
             Memento temp = new Memento(myChore);
             myCareTaker.AddMemento(temp);
+            myChore.NotifyObservers(myChore.Name + ", Edited");
         }
 
         private void undoButton_Click(object sender, EventArgs e)

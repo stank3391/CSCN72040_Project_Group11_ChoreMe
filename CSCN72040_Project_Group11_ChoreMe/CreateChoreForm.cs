@@ -47,8 +47,10 @@ namespace ChoreMe
             ListForm.myUser.addChore(tempChore);
             
             AlertBoxObserver observer = new AlertBoxObserver();
+            FileWriteObserver fileWriteObserver = new FileWriteObserver();
 
             tempChore.RegisterObserver(observer);
+            tempChore.RegisterObserver(fileWriteObserver);
             tempChore.NotifyObservers("New chore created: " + name);
 
             //clear data

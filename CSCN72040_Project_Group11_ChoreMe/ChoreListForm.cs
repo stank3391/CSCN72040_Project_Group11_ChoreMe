@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CSCN72040_Project_Group11_ChoreMe;
+using Newtonsoft.Json;
 
 namespace ChoreMe
 {
@@ -129,6 +130,7 @@ namespace ChoreMe
             if (chore != null)
             {
                 chore.Complete();
+                chore.NotifyObservers(chore.Name + ", Completed");
                 MessageBox.Show("Chore completed: " + chore.Name);
             }
             ShowSortedChores();

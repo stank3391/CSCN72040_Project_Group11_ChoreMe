@@ -9,6 +9,6 @@ namespace CSCN72040_Project_Group11_ChoreMe
     // Observer interface
     public interface IChoreObserver
     {
-        void NotifyChoreCreated(string message);
+        void Update(string message);
     }
 }
