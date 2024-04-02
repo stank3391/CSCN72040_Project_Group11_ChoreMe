@@ -33,7 +33,6 @@
             passwordBox = new TextBox();
             usernameLabel = new Label();
             passwordLabel = new Label();
-            label3 = new Label();
             createAccountButton = new Button();
             SuspendLayout();
             // 
@@ -88,15 +87,6 @@
             passwordLabel.TabIndex = 4;
             passwordLabel.Text = "Password:";
             // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.Location = new Point(256, 191);
-            label3.Name = "label3";
-            label3.Size = new Size(0, 15);
-            label3.TabIndex = 5;
-            // 
             // createAccountButton
             // 
             createAccountButton.Anchor = AnchorStyles.None;
@@ -116,7 +106,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
             Controls.Add(createAccountButton);
-            Controls.Add(label3);
             Controls.Add(passwordLabel);
             Controls.Add(usernameLabel);
             Controls.Add(passwordBox);
@@ -136,7 +125,6 @@
         private TextBox passwordBox;
         private Label usernameLabel;
         private Label passwordLabel;
-        private Label label3;
         private Button createAccountButton;
     }
 }
