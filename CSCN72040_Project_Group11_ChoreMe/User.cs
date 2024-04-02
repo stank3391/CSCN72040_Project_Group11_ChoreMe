@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSCN72040_Project_Group11_ChoreMe;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace ChoreMe
         creationdate
     }
     
-    public class User
+    public class User : Aggregate<Chore>
     {
         public string name { get; set; }
         public List<Chore> chores = new List<Chore>();

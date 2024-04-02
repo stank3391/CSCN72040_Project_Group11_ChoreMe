@@ -54,7 +54,6 @@ namespace ChoreMe
             priorityBox.Text = "";
             categoryBox.Text = "";
             dueDatePicker.Value = DateTime.Now;
-            MessageBox.Show("Successfully added chore!", "Success");
         }
     }
 }
