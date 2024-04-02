@@ -147,7 +147,7 @@
             createButton.Name = "createButton";
             createButton.Size = new Size(94, 29);
             createButton.TabIndex = 20;
-            createButton.Text = "Edit";
+            createButton.Text = "Save";
             createButton.UseVisualStyleBackColor = true;
             createButton.Click += createButton_Click;
             // 
@@ -172,15 +172,13 @@
             // 
             // priorityComboBox
             // 
+            priorityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             priorityComboBox.FormattingEnabled = true;
             priorityComboBox.Items.AddRange(new object[] { "1", "2", "3", "4" });
             priorityComboBox.Location = new Point(144, 177);
             priorityComboBox.Name = "priorityComboBox";
             priorityComboBox.Size = new Size(125, 28);
             priorityComboBox.TabIndex = 32;
-            priorityComboBox.Text = "1";
-            priorityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-
             // 
             // EditChoreForm
             // 

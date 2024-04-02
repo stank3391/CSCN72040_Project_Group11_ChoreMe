@@ -132,8 +132,9 @@ namespace ChoreMe
             if (chore != null)
             {
                 chore.Complete();
+                AlertBoxObserver newobs = new AlertBoxObserver();
+                chore.RegisterObserver(newobs);
                 chore.NotifyObservers(chore.Name + ", Completed");
-                MessageBox.Show("Chore completed: " + chore.Name);
             }
             ShowSortedChores();
         }
@@ -217,7 +218,7 @@ namespace ChoreMe
                 Chore chore = myIterator.Next();
                 Panel itemPanel = new Panel();
                 itemPanel.AutoSize = false;
-                itemPanel.Size = new System.Drawing.Size(flowLayoutPanel1.Width, 30);
+                itemPanel.Size = new System.Drawing.Size(flowLayoutPanel1.Width - 10, 30);
 
                 // Create a label for plain text
                 Label itemLabel = new Label();

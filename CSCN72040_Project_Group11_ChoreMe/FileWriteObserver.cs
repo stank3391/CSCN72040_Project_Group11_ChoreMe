@@ -10,9 +10,10 @@ namespace CSCN72040_Project_Group11_ChoreMe
     // Concrete observer
     public class FileWriteObserver : IChoreObserver
     {
+        private string filePath = "../../../logging.txt";
         public void Update(string message)
         {
-            string filePath = "../../../logging.txt";
+            
 
             try
             {

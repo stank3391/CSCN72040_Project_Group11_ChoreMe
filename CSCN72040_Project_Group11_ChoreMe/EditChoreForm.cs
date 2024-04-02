@@ -70,6 +70,8 @@ namespace ChoreMe
                 Memento temp = new Memento(myChore);
                 myCareTaker.AddMemento(temp);
                 currentIndex = myCareTaker.SavedChores.Count - 1;
+                AlertBoxObserver newobs = new AlertBoxObserver();
+                myChore.RegisterObserver(newobs);
                 myChore.NotifyObservers(myChore.Name + ", Edited");
             }
         }
