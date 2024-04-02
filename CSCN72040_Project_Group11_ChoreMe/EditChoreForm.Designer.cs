@@ -31,7 +31,6 @@
             categoryBox = new TextBox();
             redoButton = new Button();
             undoButton = new Button();
-            priorityBox = new TextBox();
             categoryLabel = new Label();
             dueDateLabel = new Label();
             dueDatePicker = new DateTimePicker();
@@ -42,6 +41,7 @@
             createButton = new Button();
             backButton = new Button();
             nameBox = new TextBox();
+            priorityComboBox = new ComboBox();
             SuspendLayout();
             // 
             // categoryBox
@@ -73,14 +73,6 @@
             undoButton.Text = "Undo";
             undoButton.UseVisualStyleBackColor = true;
             undoButton.Click += undoButton_Click;
-            // 
-            // priorityBox
-            // 
-            priorityBox.Anchor = AnchorStyles.None;
-            priorityBox.Location = new Point(144, 174);
-            priorityBox.Name = "priorityBox";
-            priorityBox.Size = new Size(125, 27);
-            priorityBox.TabIndex = 28;
             // 
             // categoryLabel
             // 
@@ -178,15 +170,25 @@
             nameBox.Size = new Size(125, 27);
             nameBox.TabIndex = 18;
             // 
+            // priorityComboBox
+            // 
+            priorityComboBox.FormattingEnabled = true;
+            priorityComboBox.Items.AddRange(new object[] { "1", "2", "3", "4" });
+            priorityComboBox.Location = new Point(144, 177);
+            priorityComboBox.Name = "priorityComboBox";
+            priorityComboBox.Size = new Size(125, 28);
+            priorityComboBox.TabIndex = 32;
+            priorityComboBox.Text = "1";
+            // 
             // EditChoreForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(priorityComboBox);
             Controls.Add(categoryBox);
             Controls.Add(redoButton);
             Controls.Add(undoButton);
-            Controls.Add(priorityBox);
             Controls.Add(categoryLabel);
             Controls.Add(dueDateLabel);
             Controls.Add(dueDatePicker);
@@ -208,7 +210,6 @@
         private TextBox categoryBox;
         private Button redoButton;
         private Button undoButton;
-        private TextBox priorityBox;
         private Label categoryLabel;
         private Label dueDateLabel;
         private DateTimePicker dueDatePicker;
@@ -219,5 +220,6 @@
         private Button createButton;
         private Button backButton;
         private TextBox nameBox;
+        private ComboBox priorityComboBox;
     }
 }

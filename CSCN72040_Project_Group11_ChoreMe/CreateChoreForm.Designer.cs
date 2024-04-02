@@ -37,9 +37,9 @@
             priorityLabel = new Label();
             dueDatePicker = new DateTimePicker();
             dueDateLabel = new Label();
-            priorityBox = new TextBox();
             categoryLabel = new Label();
             categoryBox = new TextBox();
+            priorityComboBox = new ComboBox();
             SuspendLayout();
             // 
             // nameBox
@@ -128,14 +128,6 @@
             dueDateLabel.TabIndex = 10;
             dueDateLabel.Text = "Due Date";
             // 
-            // priorityBox
-            // 
-            priorityBox.Anchor = AnchorStyles.None;
-            priorityBox.Location = new Point(152, 173);
-            priorityBox.Name = "priorityBox";
-            priorityBox.Size = new Size(125, 27);
-            priorityBox.TabIndex = 14;
-            // 
             // categoryLabel
             // 
             categoryLabel.Anchor = AnchorStyles.None;
@@ -154,13 +146,23 @@
             categoryBox.Size = new Size(125, 27);
             categoryBox.TabIndex = 17;
             // 
+            // priorityComboBox
+            // 
+            priorityComboBox.FormattingEnabled = true;
+            priorityComboBox.Items.AddRange(new object[] { "1", "2", "3", "4" });
+            priorityComboBox.Location = new Point(152, 175);
+            priorityComboBox.Name = "priorityComboBox";
+            priorityComboBox.Size = new Size(125, 28);
+            priorityComboBox.TabIndex = 18;
+            priorityComboBox.Text = "1";
+            // 
             // CreateChoreForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 451);
+            Controls.Add(priorityComboBox);
             Controls.Add(categoryBox);
-            Controls.Add(priorityBox);
             Controls.Add(categoryLabel);
             Controls.Add(dueDateLabel);
             Controls.Add(dueDatePicker);
@@ -188,8 +190,8 @@
         private Label priorityLabel;
         private DateTimePicker dueDatePicker;
         private Label dueDateLabel;
-        private TextBox priorityBox;
         private Label categoryLabel;
         private TextBox categoryBox;
+        private ComboBox priorityComboBox;
     }
 }

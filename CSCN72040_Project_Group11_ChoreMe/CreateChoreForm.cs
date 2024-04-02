@@ -25,7 +25,6 @@ namespace ChoreMe
         {
             nameBox.Text = "";
             descriptionBox.Text = "";
-            priorityBox.Text = "";
             categoryBox.Text = "";
             dueDatePicker.Value = DateTime.Now;
             this.Hide();
@@ -39,7 +38,7 @@ namespace ChoreMe
             //add checks to make sure data is okay
             String name = nameBox.Text;
             String desc = descriptionBox.Text;
-            int prior = Int32.Parse(priorityBox.Text);
+            int prior = Int32.Parse(priorityComboBox.Text);
             String cat = categoryBox.Text;
             DateTime dueDate = dueDatePicker.Value.Date;
 
@@ -58,7 +57,7 @@ namespace ChoreMe
             //clear data
             nameBox.Text = "";
             descriptionBox.Text = "";
-            priorityBox.Text = "";
+            priorityComboBox.Text = "1";
             categoryBox.Text = "";
             dueDatePicker.Value = DateTime.Now;
             

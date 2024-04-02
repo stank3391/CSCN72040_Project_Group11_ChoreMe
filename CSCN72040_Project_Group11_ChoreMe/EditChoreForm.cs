@@ -28,7 +28,7 @@ namespace ChoreMe
             myChore = ch;
             nameBox.Text = myChore.Name;
             descriptionBox.Text = myChore.Description;
-            priorityBox.Text = myChore.Priority.ToString();
+            priorityComboBox.Text = myChore.Priority.ToString();
             categoryBox.Text = myChore.Category;
             dueDatePicker.Value = myChore.DueDate;
             myMemento = new Memento(ch);
@@ -45,7 +45,7 @@ namespace ChoreMe
         {
             myChore.Name = nameBox.Text;
             myChore.Description = descriptionBox.Text;
-            myChore.Priority = Int32.Parse(priorityBox.Text);
+            myChore.Priority = Int32.Parse(priorityComboBox.Text);
             myChore.Category = categoryBox.Text;
             myChore.DueDate = dueDatePicker.Value;
             Memento temp = new Memento(myChore);
@@ -65,7 +65,7 @@ namespace ChoreMe
 
             nameBox.Text = temp.Name;
             descriptionBox.Text = temp.Description;
-            priorityBox.Text = temp.Priority.ToString();
+            priorityComboBox.Text = temp.Priority.ToString();
             categoryBox.Text = temp.Category;
             dueDatePicker.Value = temp.DueDate;
         }
@@ -83,7 +83,7 @@ namespace ChoreMe
 
             nameBox.Text = temp.Name;
             descriptionBox.Text = temp.Description;
-            priorityBox.Text = temp.Priority.ToString();
+            priorityComboBox.Text = temp.Priority.ToString();
             categoryBox.Text = temp.Category;
             dueDatePicker.Value = temp.DueDate;
         }

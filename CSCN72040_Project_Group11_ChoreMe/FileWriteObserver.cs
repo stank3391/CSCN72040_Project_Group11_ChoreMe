@@ -12,7 +12,7 @@ namespace CSCN72040_Project_Group11_ChoreMe
     {
         public void Update(string message)
         {
-            string filePath = "logging.txt";
+            string filePath = "../../../logging.txt";
 
             try
             {
