@@ -155,6 +155,8 @@
             priorityComboBox.Size = new Size(125, 28);
             priorityComboBox.TabIndex = 18;
             priorityComboBox.Text = "1";
+            priorityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+
             // 
             // CreateChoreForm
             // 

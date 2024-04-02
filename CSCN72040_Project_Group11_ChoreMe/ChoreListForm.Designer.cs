@@ -83,6 +83,8 @@ namespace ChoreMe
             sortByComboBox.TabIndex = 7;
             sortByComboBox.Text = "Priority";
             sortByComboBox.SelectedIndexChanged += sortByComboBox_SelectedIndexChanged;
+            sortByComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+
             // 
             // choresStatusComboBox
             // 
@@ -95,6 +97,8 @@ namespace ChoreMe
             choresStatusComboBox.TabIndex = 8;
             choresStatusComboBox.Text = "All";
             choresStatusComboBox.SelectedIndexChanged += choresStatusComboBox_SelectedIndexChanged;
+            choresStatusComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+
             // 
             // label1
             // 
