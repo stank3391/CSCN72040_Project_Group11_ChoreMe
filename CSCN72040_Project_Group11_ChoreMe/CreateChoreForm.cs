@@ -23,6 +23,11 @@ namespace ChoreMe
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            nameBox.Text = "";
+            descriptionBox.Text = "";
+            priorityBox.Text = "";
+            categoryBox.Text = "";
+            dueDatePicker.Value = DateTime.Now;
             this.Hide();
             ListForm.Show();
         }
