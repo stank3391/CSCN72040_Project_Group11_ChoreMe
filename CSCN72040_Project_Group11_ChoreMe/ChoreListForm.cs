@@ -109,6 +109,8 @@ namespace ChoreMe
                 MessageBox.Show("Chore removed: " + chore.Name);
             }
 
+            choresStatusComboBox_SelectedIndexChanged(sender, e);
+
             ShowSortedChores();
         }
 
@@ -142,7 +144,7 @@ namespace ChoreMe
         /// updates the SelectedChoreList with the list of chores to sort and display
         /// and calls ShowSortedChores() to update the list
         /// </summary>
-        private void choresStatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        public void choresStatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Console.WriteLine("Chore status selected: " + choresStatusComboBox.Text);
             // show only chores with selected status
@@ -177,6 +179,7 @@ namespace ChoreMe
         /// </summary>
         public void ShowSortedChores()
         {
+
             flowLayoutPanel1.Controls.Clear();
 
             Iterator<Chore> myIterator = null;

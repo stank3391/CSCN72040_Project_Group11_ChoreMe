@@ -30,6 +30,7 @@ namespace ChoreMe
             dueDatePicker.Value = DateTime.Now;
             this.Hide();
             ListForm.ShowSortedChores(); // refresh the list
+            ListForm.choresStatusComboBox_SelectedIndexChanged(sender, e);
             ListForm.Show();
         }
 
@@ -53,12 +54,14 @@ namespace ChoreMe
             tempChore.RegisterObserver(fileWriteObserver);
             tempChore.NotifyObservers("New chore created: " + name);
 
+
             //clear data
             nameBox.Text = "";
             descriptionBox.Text = "";
             priorityBox.Text = "";
             categoryBox.Text = "";
             dueDatePicker.Value = DateTime.Now;
+            
         }
     }
 }
