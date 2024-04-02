@@ -1,4 +1,5 @@
 ﻿using ChoreMe;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,24 @@ namespace ChoreMe
         private void logoutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
+            
+            // find user in json and update
+            string json = File.ReadAllText("../../../loginInfo.json");
+            List<LoginInfo> jsonList = new List<LoginInfo>();
+            jsonList = JsonConvert.DeserializeObject<List<LoginInfo>>(json);
+            foreach (LoginInfo LoginInfo in jsonList)
+            {
+                if (LoginInfo.username == myUser.name)
+                {
+                    LoginInfo.chores = myUser.chores;
+                    break;
+                }
+            }
+
+            // save to json
+            string jsontemp = JsonConvert.SerializeObject(jsonList);
+            File.WriteAllText("../../../loginInfo.json", jsontemp);
+
             LogForm.Show();
         }
 

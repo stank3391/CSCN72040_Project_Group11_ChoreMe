@@ -53,6 +53,25 @@ namespace ChoreMe
             this.CreationDate = DateTime.Now;
         }
 
+        /// <summary>
+        /// for json deserialization
+        /// </summary>
+        public Chore(){}
+
+        /// <summary>
+        /// for json deserialization
+        /// </summary>
+        public Chore(string name, string description, int priority, string category, DateTime dueDate, DateTime creationDate)
+        {
+            this.creationDate = creationDate;
+            Name = name;
+            Description = description;
+            Priority = priority;
+            Category = category;
+            DueDate = dueDate;
+            CreationDate = creationDate;
+        }
+
         public Chore(Memento m)
         {
             this.Name = m.Name;
