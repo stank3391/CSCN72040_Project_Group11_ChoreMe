@@ -17,10 +17,7 @@ namespace ChoreMe
         public Chore myChore { get; set; }
         public Memento myMemento { get; set; }
         public CareTaker myCareTaker = new CareTaker();
-
-
-
-
+        public int currentIndex { get; set; }
         public EditChoreForm(ChoreListForm prevForm, Chore ch)
         {
             InitializeComponent();
@@ -33,47 +30,61 @@ namespace ChoreMe
             dueDatePicker.Value = myChore.DueDate;
             myMemento = new Memento(ch);
             myCareTaker.AddMemento(myMemento);
+            currentIndex = 0;
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            ListForm.ShowSortedChores();
             this.Hide();
             ListForm.Show();
         }
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            myChore.Name = nameBox.Text;
-            myChore.Description = descriptionBox.Text;
-            myChore.Priority = Int32.Parse(priorityComboBox.Text);
-            myChore.Category = categoryBox.Text;
-            myChore.DueDate = dueDatePicker.Value;
-            Memento temp = new Memento(myChore);
-            myCareTaker.AddMemento(temp);
-            myChore.NotifyObservers(myChore.Name + ", Edited");
+            //if okay
+            if (nameBox.Text == "")
+            {
+                MessageBox.Show("Name cannot be empty!");
+            }
+            else if (categoryBox.Text == "")
+            {
+                MessageBox.Show("Category cannot be empty!");
+            }
+            else
+            {
+                myChore.Name = nameBox.Text;
+                myChore.Description = descriptionBox.Text;
+                myChore.Priority = Int32.Parse(priorityComboBox.Text);
+                myChore.Category = categoryBox.Text;
+                myChore.DueDate = dueDatePicker.Value;
+                Memento temp = new Memento(myChore);
+                myCareTaker.AddMemento(temp);
+                currentIndex = myCareTaker.SavedChores.Count - 1;
+                myChore.NotifyObservers(myChore.Name + ", Edited");
+            }
         }
 
         private void undoButton_Click(object sender, EventArgs e)
         {
-            Memento temp = myCareTaker.GetMemento(0);
-
-            myChore.Name = temp.Name;
-            myChore.Description = temp.Description;
-            myChore.Priority = temp.Priority;
-            myChore.Category = temp.Category;
-            myChore.DueDate = temp.DueDate;
-
-            nameBox.Text = temp.Name;
-            descriptionBox.Text = temp.Description;
-            priorityComboBox.Text = temp.Priority.ToString();
-            categoryBox.Text = temp.Category;
-            dueDatePicker.Value = temp.DueDate;
+            if (currentIndex - 1 >= 0)
+            {
+                currentIndex--;
+            }
+            UpdateChoreDisplay();
         }
 
         private void redoButton_Click(object sender, EventArgs e)
         {
-            myCareTaker.GetMemento(1);
-            Memento temp = myCareTaker.GetMemento(1);
+            if (currentIndex + 1 <= myCareTaker.SavedChores.Count-1)
+            {
+                currentIndex++;
+            }
+            UpdateChoreDisplay();
+        }
+        private void UpdateChoreDisplay()
+        {
+            Memento temp = myCareTaker.GetMemento(currentIndex);
 
             myChore.Name = temp.Name;
             myChore.Description = temp.Description;

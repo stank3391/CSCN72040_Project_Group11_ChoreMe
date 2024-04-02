@@ -43,24 +43,33 @@ namespace ChoreMe
             DateTime dueDate = dueDatePicker.Value.Date;
 
             //if data is okay
-            Chore tempChore = new Chore(name, desc, prior, cat, dueDate);
-            ListForm.myUser.addChore(tempChore);
-            
-            AlertBoxObserver observer = new AlertBoxObserver();
-            FileWriteObserver fileWriteObserver = new FileWriteObserver();
+            if (nameBox.Text == "")
+            {
+                MessageBox.Show("Name cannot be empty!");
+            }
+            else if (categoryBox.Text == "")
+            {
+                MessageBox.Show("Category cannot be empty!");
+            }
+            else
+            {
+                Chore tempChore = new Chore(name, desc, prior, cat, dueDate);
+                ListForm.myUser.addChore(tempChore);
+                AlertBoxObserver observer = new AlertBoxObserver();
+                FileWriteObserver fileWriteObserver = new FileWriteObserver();
 
-            tempChore.RegisterObserver(observer);
-            tempChore.RegisterObserver(fileWriteObserver);
-            tempChore.NotifyObservers("New chore created: " + name);
+                tempChore.RegisterObserver(observer);
+                tempChore.RegisterObserver(fileWriteObserver);
+                tempChore.NotifyObservers("New chore created: " + name);
 
 
-            //clear data
-            nameBox.Text = "";
-            descriptionBox.Text = "";
-            priorityComboBox.Text = "1";
-            categoryBox.Text = "";
-            dueDatePicker.Value = DateTime.Now;
-            
+                //clear data
+                nameBox.Text = "";
+                descriptionBox.Text = "";
+                priorityComboBox.Text = "1";
+                categoryBox.Text = "";
+                dueDatePicker.Value = DateTime.Now;
+            }            
         }
     }
 }
