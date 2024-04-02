@@ -1,4 +1,5 @@
 ﻿using ChoreMe;
+using CSCN72040_Project_Group11_ChoreMe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,11 @@ namespace ChoreMe
             Chore tempChore = new Chore(name, desc, prior, cat, dueDate);
             ListForm.myUser.addChore(tempChore);
             
+            AlertBoxObserver observer = new AlertBoxObserver();
+
+            tempChore.RegisterObserver(observer);
+            tempChore.NotifyObservers("New chore created: " + name);
+
             //clear data
             nameBox.Text = "";
             descriptionBox.Text = "";

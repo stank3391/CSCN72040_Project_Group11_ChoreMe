@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CSCN72040_Project_Group11_ChoreMe;
 
 namespace ChoreMe
 {
-    public class Chore
+    public class Chore : IChoreSubject
     {
+        private List<IChoreObserver> observers = new List<IChoreObserver>();
         private string name;
         private string description;
         private int priority;
@@ -22,6 +24,24 @@ namespace ChoreMe
         public string Category { get { return category; } set { category = value; } }
         public DateTime DueDate { get { return dueDate; } set { dueDate = value; } }
         public DateTime CreationDate { get { return creationDate; } set { creationDate = value; } }
+
+        public void RegisterObserver(IChoreObserver observer)
+        {
+            observers.Add(observer);
+        }
+
+        public void RemoveObserver(IChoreObserver observer)
+        {
+            observers.Remove(observer);
+        }
+
+        public void NotifyObservers(string message)
+        {
+            foreach (var observer in observers)
+            {
+                observer.NotifyChoreCreated(message);
+            }
+        }
 
         public Chore(string name, string desc, int prior, string cat, DateTime due)
         {
