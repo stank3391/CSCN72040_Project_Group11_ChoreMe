@@ -20,6 +20,13 @@ namespace ChoreMe
 
         public User(string name) {
             this.name = name;
+            this.chores = new List<Chore>();
+        }
+
+        public User (string name, List<Chore> chores) 
+        {
+            this.name = name;
+            this.chores = chores;
         }
         public void addChore(Chore chore)
         {
