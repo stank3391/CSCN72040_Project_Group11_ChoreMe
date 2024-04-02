@@ -40,10 +40,9 @@ namespace ChoreMe
             // logoutButton
             // 
             logoutButton.Anchor = AnchorStyles.Top;
-            logoutButton.Location = new Point(622, 9);
-            logoutButton.Margin = new Padding(3, 2, 3, 2);
+            logoutButton.Location = new Point(711, 12);
             logoutButton.Name = "logoutButton";
-            logoutButton.Size = new Size(82, 22);
+            logoutButton.Size = new Size(94, 29);
             logoutButton.TabIndex = 0;
             logoutButton.Text = "Logout";
             logoutButton.UseVisualStyleBackColor = true;
@@ -55,20 +54,19 @@ namespace ChoreMe
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 53);
-            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
+            flowLayoutPanel1.Location = new Point(0, 71);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(715, 300);
+            flowLayoutPanel1.Padding = new Padding(0, 0, 0, 3);
+            flowLayoutPanel1.Size = new Size(817, 400);
             flowLayoutPanel1.TabIndex = 1;
             flowLayoutPanel1.WrapContents = false;
             // 
             // createChoreButton
             // 
             createChoreButton.Anchor = AnchorStyles.Top;
-            createChoreButton.Location = new Point(535, 1);
-            createChoreButton.Margin = new Padding(3, 2, 3, 2);
+            createChoreButton.Location = new Point(611, 1);
             createChoreButton.Name = "createChoreButton";
-            createChoreButton.Size = new Size(82, 38);
+            createChoreButton.Size = new Size(94, 51);
             createChoreButton.TabIndex = 5;
             createChoreButton.Text = "Create Chore";
             createChoreButton.UseVisualStyleBackColor = true;
@@ -79,10 +77,9 @@ namespace ChoreMe
             sortByComboBox.Anchor = AnchorStyles.Top;
             sortByComboBox.FormattingEnabled = true;
             sortByComboBox.Items.AddRange(new object[] { "Priority", "Category", "Due Date", "Creation Date" });
-            sortByComboBox.Location = new Point(437, 9);
-            sortByComboBox.Margin = new Padding(3, 2, 3, 2);
+            sortByComboBox.Location = new Point(499, 12);
             sortByComboBox.Name = "sortByComboBox";
-            sortByComboBox.Size = new Size(93, 23);
+            sortByComboBox.Size = new Size(106, 28);
             sortByComboBox.TabIndex = 7;
             sortByComboBox.Text = "Priority";
             sortByComboBox.SelectedIndexChanged += sortByComboBox_SelectedIndexChanged;
@@ -91,9 +88,10 @@ namespace ChoreMe
             // 
             choresStatusComboBox.FormattingEnabled = true;
             choresStatusComboBox.Items.AddRange(new object[] { "All", "Incompleted", "Completed" });
-            choresStatusComboBox.Location = new Point(131, 10);
+            choresStatusComboBox.Location = new Point(150, 13);
+            choresStatusComboBox.Margin = new Padding(3, 4, 3, 4);
             choresStatusComboBox.Name = "choresStatusComboBox";
-            choresStatusComboBox.Size = new Size(121, 23);
+            choresStatusComboBox.Size = new Size(138, 28);
             choresStatusComboBox.TabIndex = 8;
             choresStatusComboBox.Text = "All";
             choresStatusComboBox.SelectedIndexChanged += choresStatusComboBox_SelectedIndexChanged;
@@ -101,26 +99,26 @@ namespace ChoreMe
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(63, 14);
+            label1.Location = new Point(72, 19);
             label1.Name = "label1";
-            label1.Size = new Size(67, 15);
+            label1.Size = new Size(81, 20);
             label1.TabIndex = 9;
             label1.Text = "My Chores:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(384, 13);
+            label2.Location = new Point(439, 17);
             label2.Name = "label2";
-            label2.Size = new Size(47, 15);
+            label2.Size = new Size(59, 20);
             label2.TabIndex = 10;
             label2.Text = "Sort By:";
             // 
             // ChoreListForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(715, 353);
+            ClientSize = new Size(817, 471);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(choresStatusComboBox);
@@ -128,7 +126,6 @@ namespace ChoreMe
             Controls.Add(createChoreButton);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(logoutButton);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "ChoreListForm";
             Text = "ChoreListForm";
             ResumeLayout(false);

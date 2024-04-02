@@ -17,6 +17,7 @@ namespace ChoreMe
             InitializeComponent();
             this.LoginForm = loginForm;
             this.CCForm = new CreateChoreForm(this);
+            flowLayoutPanel1.Width = (this.ClientSize.Width - 10);        //Margin is needed otherwise sizing will overwrite the right hand margin
 
             myUser = user;
 
@@ -24,9 +25,9 @@ namespace ChoreMe
 
             ShowSortedChores();
         }
-        private void MainForm_Resize(object sender, EventArgs e)
+        private void ChoreListForm_Resize(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Width = this.ClientSize.Width / 2;
+            flowLayoutPanel1.Width = (this.ClientSize.Width- 10);
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
@@ -211,12 +212,13 @@ namespace ChoreMe
                 Chore chore = myIterator.Next();
                 Panel itemPanel = new Panel();
                 itemPanel.AutoSize = false;
-                itemPanel.Size = new System.Drawing.Size(400, 30);
+                itemPanel.Size = new System.Drawing.Size(flowLayoutPanel1.Width, 30);
 
                 // Create a label for plain text
                 Label itemLabel = new Label();
                 itemLabel.AutoSize = true;
                 itemLabel.Text = "Chore: " + chore.Name; // Example text
+                itemLabel.SendToBack();
                 itemPanel.Controls.Add(itemLabel);
 
                 // Create a button
@@ -255,6 +257,7 @@ namespace ChoreMe
                 removeButton.Tag = chore;
                 removeButton.Click += RemoveButton_Click; // Add event handler for remove button click
                 removeButton.Dock = DockStyle.Right; // Align button to the right
+                removeButton.Margin = new Padding(3);
                 itemPanel.Controls.Add(removeButton);
 
                 // Add the panel to the flow layout panel
