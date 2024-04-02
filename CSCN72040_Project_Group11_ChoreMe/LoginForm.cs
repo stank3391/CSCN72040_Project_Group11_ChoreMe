@@ -16,37 +16,16 @@ namespace ChoreMe
 
     public partial class LoginForm : Form
     {
-        //public User CurUser { get; set; }
-        public ChoreListForm ChoreListForm = new ChoreListForm();
+        private ChoreListForm ChoreListForm;
 
-        //Put your object in here too
-        public LoginForm(Form form = null /*User u = null*/)
+        public LoginForm()
         {
-            ChoreListForm.LogForm = this;
-            //CurUser = u;
             InitializeComponent();
         }
 
         private void login_Click(object sender, EventArgs e)
         {
-
-            /*Chore chore1 = new Chore("TEST100", "TEST DESC", 2, "TEST CAT2", DateTime.Now);
-            Chore chore2 = new Chore("TEST2", "TEST DESC", 1, "TEST CAT1", DateTime.Now);
-
-            List<Chore> chores = new List<Chore>
-            {
-                chore1,
-                chore2
-            };
-
-            List<LoginInfo> loginInfos = new List<LoginInfo>
-            {
-                new LoginInfo("", "", chores),
-                new LoginInfo("admin", "admin", chores)
-            };
-            string jsontemp = JsonConvert.SerializeObject(loginInfos);
-            File.WriteAllText("../../../loginInfo.json", jsontemp);*/
-
+            // read from json file
             string json = File.ReadAllText("../../../loginInfo.json");
             List<LoginInfo> jsonList = new List<LoginInfo>();
             jsonList = JsonConvert.DeserializeObject<List<LoginInfo>>(json);
@@ -57,24 +36,30 @@ namespace ChoreMe
             {
                 if (usernameBox.Text == loginInfo.username && passwordBox.Text == loginInfo.password)
                 {
-                    Console.WriteLine("Login Successful");
-                    //create new credential
-                    //Credential user;
+                    Console.WriteLine("User found");
+
                     User CurUser = new User(usernameBox.Text, loginInfo.chores);
-                    //LoginInfo actual = new LoginInfo(loginInfo.username, loginInfo.password);
-                    //ChoreListForm.
-                    ChoreListForm.myUser = CurUser;
-                    ChoreListForm.Show();
+
+                    // create new chore list form
+                    ChoreListForm = new ChoreListForm(this, CurUser);
+
                     this.Hide();
+
+                    ChoreListForm.Show();
+
                     found = true;
+
+                    break;
                 }
             }
 
-            if (!found)
+            if(!found)
             {
-                //if incorrect
                 MessageBox.Show("Username or Password is incorrect", "Error");
+
             }
+
+            // clear textboxes
             usernameBox.Text = "";
             passwordBox.Text = "";
         }
@@ -139,8 +124,6 @@ namespace ChoreMe
         /// <summary>
         /// used for creating a new user (because new user doesnt have any chores)
         /// </summary>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
         public LoginInfo(string username, string password)
         {
             this.username = username;
@@ -151,9 +134,6 @@ namespace ChoreMe
         /// <summary>
         /// used for saving and loading users
         /// </summary>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
-        /// <param name="chores"></param>
         public LoginInfo(string username, string password, List<Chore> chores)
         {
             this.username = username;

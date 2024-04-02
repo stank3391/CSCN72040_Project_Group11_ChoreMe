@@ -29,6 +29,7 @@ namespace ChoreMe
             categoryBox.Text = "";
             dueDatePicker.Value = DateTime.Now;
             this.Hide();
+            ListForm.ShowSortedChores(); // refresh the list
             ListForm.Show();
         }
 
@@ -40,9 +41,6 @@ namespace ChoreMe
             int prior = Int32.Parse(priorityBox.Text);
             String cat = categoryBox.Text;
             DateTime dueDate = dueDatePicker.Value.Date;
-
-
-
 
             //if data is okay
             Chore tempChore = new Chore(name, desc, prior, cat, dueDate);
