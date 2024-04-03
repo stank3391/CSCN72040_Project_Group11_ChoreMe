@@ -178,6 +178,7 @@
             priorityComboBox.Location = new Point(144, 177);
             priorityComboBox.Name = "priorityComboBox";
             priorityComboBox.Size = new Size(125, 28);
+            priorityComboBox.Text = "1";
             priorityComboBox.TabIndex = 32;
             // 
             // EditChoreForm

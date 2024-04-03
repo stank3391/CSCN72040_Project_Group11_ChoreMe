@@ -154,6 +154,7 @@
             priorityComboBox.Location = new Point(152, 175);
             priorityComboBox.Name = "priorityComboBox";
             priorityComboBox.Size = new Size(125, 28);
+            priorityComboBox.Text = "1";
             priorityComboBox.TabIndex = 18;
             // 
             // CreateChoreForm
