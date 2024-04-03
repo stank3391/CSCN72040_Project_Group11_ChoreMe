@@ -47,7 +47,7 @@
             nameBox.Anchor = AnchorStyles.None;
             nameBox.Location = new Point(152, 103);
             nameBox.Name = "nameBox";
-            nameBox.Size = new Size(125, 27);
+            nameBox.Size = new Size(470, 27);
             nameBox.TabIndex = 0;
             // 
             // backButton
@@ -77,7 +77,7 @@
             descriptionBox.Anchor = AnchorStyles.None;
             descriptionBox.Location = new Point(152, 136);
             descriptionBox.Name = "descriptionBox";
-            descriptionBox.Size = new Size(125, 27);
+            descriptionBox.Size = new Size(470, 27);
             descriptionBox.TabIndex = 3;
             // 
             // nameLabel
@@ -143,20 +143,18 @@
             categoryBox.Anchor = AnchorStyles.None;
             categoryBox.Location = new Point(152, 212);
             categoryBox.Name = "categoryBox";
-            categoryBox.Size = new Size(125, 27);
+            categoryBox.Size = new Size(470, 27);
             categoryBox.TabIndex = 17;
             // 
             // priorityComboBox
             // 
+            priorityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             priorityComboBox.FormattingEnabled = true;
             priorityComboBox.Items.AddRange(new object[] { "1", "2", "3", "4" });
             priorityComboBox.Location = new Point(152, 175);
             priorityComboBox.Name = "priorityComboBox";
             priorityComboBox.Size = new Size(125, 28);
             priorityComboBox.TabIndex = 18;
-            priorityComboBox.Text = "1";
-            priorityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-
             // 
             // CreateChoreForm
             // 

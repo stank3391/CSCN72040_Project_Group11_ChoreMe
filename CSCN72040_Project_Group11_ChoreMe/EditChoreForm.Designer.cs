@@ -49,7 +49,7 @@
             categoryBox.Anchor = AnchorStyles.None;
             categoryBox.Location = new Point(144, 213);
             categoryBox.Name = "categoryBox";
-            categoryBox.Size = new Size(125, 27);
+            categoryBox.Size = new Size(455, 27);
             categoryBox.TabIndex = 31;
             // 
             // redoButton
@@ -137,7 +137,7 @@
             descriptionBox.Anchor = AnchorStyles.None;
             descriptionBox.Location = new Point(144, 137);
             descriptionBox.Name = "descriptionBox";
-            descriptionBox.Size = new Size(125, 27);
+            descriptionBox.Size = new Size(455, 27);
             descriptionBox.TabIndex = 21;
             // 
             // createButton
@@ -167,7 +167,7 @@
             nameBox.Anchor = AnchorStyles.None;
             nameBox.Location = new Point(144, 104);
             nameBox.Name = "nameBox";
-            nameBox.Size = new Size(125, 27);
+            nameBox.Size = new Size(455, 27);
             nameBox.TabIndex = 18;
             // 
             // priorityComboBox
