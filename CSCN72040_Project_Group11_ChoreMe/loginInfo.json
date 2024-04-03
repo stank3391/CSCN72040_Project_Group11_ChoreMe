@@ -1,1 +1,152 @@
-[{"username":"","password":"","chores":[{"Name":"EditedChore","Description":"TEST DESC","Priority":2,"Category":"TEST CAT2","DueDate":"2024-04-01T20:27:41.7466636-04:00","CreationDate":"2024-04-01T20:27:41.746907-04:00","IsComplete":true},{"Name":"dfg","Description":"","Priority":4,"Category":"","DueDate":"2024-04-01T00:00:00-04:00","CreationDate":"2024-04-01T21:26:56.832243-04:00","IsComplete":false},{"Name":"test","Description":"123","Priority":1,"Category":"12312312312","DueDate":"2024-04-02T00:00:00-04:00","CreationDate":"2024-04-02T04:09:16.1569637-04:00","IsComplete":true},{"Name":"gang","Description":"12312","Priority":4,"Category":"123","DueDate":"2024-04-02T00:00:00-04:00","CreationDate":"2024-04-02T05:59:03.1683605-04:00","IsComplete":false},{"Name":"idk","Description":"123123123213","Priority":1,"Category":"idk","DueDate":"2024-04-02T00:00:00-04:00","CreationDate":"2024-04-02T06:14:27.0629274-04:00","IsComplete":true},{"Name":"BowensOverdueChore","Description":"A very important chore","Priority":4,"Category":"Bowens Chores","DueDate":"2024-03-31T00:00:00","CreationDate":"2024-04-02T10:24:56.3064937-04:00","IsComplete":true},{"Name":"testChore","Description":"","Priority":2,"Category":"","DueDate":"2024-04-02T00:00:00-04:00","CreationDate":"2024-04-02T10:26:22.3115596-04:00","IsComplete":false},{"Name":"BowenEditedChore","Description":"","Priority":3,"Category":"","DueDate":"2024-04-02T00:00:00-04:00","CreationDate":"2024-04-02T10:28:11.857927-04:00","IsComplete":true},{"Name":"NewChoreBowen","Description":"","Priority":3,"Category":"","DueDate":"2024-04-02T00:00:00-04:00","CreationDate":"2024-04-02T10:32:38.167563-04:00","IsComplete":true}]},{"username":"admin","password":"admin","chores":[{"Name":"TEST100","Description":"TEST DESC","Priority":2,"Category":"TEST CAT2","DueDate":"2024-04-01T20:27:41.7466636-04:00","CreationDate":"2024-04-01T20:27:41.746907-04:00","IsComplete":false},{"Name":"TEST2","Description":"TEST DESC","Priority":1,"Category":"TEST CAT1","DueDate":"2024-04-01T20:27:41.7469465-04:00","CreationDate":"2024-04-01T20:27:41.7469481-04:00","IsComplete":false}]},{"username":"joe","password":"mama","chores":[{"Name":"Never gona","Description":"give you up","Priority":4,"Category":"rick","DueDate":"2024-04-02T00:00:00","CreationDate":"2024-04-01T20:57:03.5641093-04:00","IsComplete":false}]},{"username":"Rapunzel","password":"password","chores":[{"Name":"Sweep","Description":"Til the floor's all clean","Priority":1,"Category":"Seven AM","DueDate":"2024-04-10T00:00:00","CreationDate":"2024-04-02T07:41:50.7901867-04:00","IsComplete":false},{"Name":"Polish","Description":"and wax","Priority":1,"Category":"Seven AM","DueDate":"2024-04-18T00:00:00","CreationDate":"2024-04-02T07:42:16.7390592-04:00","IsComplete":false},{"Name":"Mop","Description":"and shine up","Priority":1,"Category":"Seven AM","DueDate":"2024-04-28T00:00:00","CreationDate":"2024-04-02T07:42:37.0100631-04:00","IsComplete":false},{"Name":"Read","Description":"a book or maybe two or three","Priority":2,"Category":"Seven 15","DueDate":"2024-04-13T00:00:00","CreationDate":"2024-04-02T07:44:11.2140843-04:00","IsComplete":false},{"Name":"Sweep","Description":"again","Priority":1,"Category":"Seven AM","DueDate":"2024-05-16T00:00:00","CreationDate":"2024-04-02T07:45:01.7059858-04:00","IsComplete":false},{"Name":"New paintings","Description":"to my gallery","Priority":2,"Category":"Seven 15","DueDate":"2024-04-25T00:00:00","CreationDate":"2024-04-02T07:46:33.1212198-04:00","IsComplete":false},{"Name":"Play Guitar","Description":"and knit","Priority":2,"Category":"Seven 15","DueDate":"2024-05-13T00:00:00","CreationDate":"2024-04-02T08:07:09.5582573-04:00","IsComplete":false},{"Name":"Cook","Description":"and basically wonder when will my life begin","Priority":2,"Category":"Seven 15","DueDate":"2024-05-03T00:00:00","CreationDate":"2024-04-02T08:07:36.0811746-04:00","IsComplete":false},{"Name":"Puzzles","Description":"and darts and baking","Priority":3,"Category":"After lunch","DueDate":"2024-05-13T00:00:00","CreationDate":"2024-04-02T08:08:09.1503359-04:00","IsComplete":false},{"Name":"Paper mache","Description":"a bit of ballet and chess","Priority":3,"Category":"After lunch","DueDate":"2024-05-10T00:00:00","CreationDate":"2024-04-02T08:08:39.0697868-04:00","IsComplete":false},{"Name":"Pottery","Description":"and ventriolquy and candle making","Priority":3,"Category":"After lunch","DueDate":"2024-05-21T00:00:00","CreationDate":"2024-04-02T08:09:14.1884415-04:00","IsComplete":false},{"Name":"Stretch","Description":"and sketch take a climb","Priority":3,"Category":"After lunch","DueDate":"2024-05-15T00:00:00","CreationDate":"2024-04-02T08:09:39.1123014-04:00","IsComplete":false},{"Name":"Sew","Description":"a dress!","Priority":3,"Category":"After lunch","DueDate":"2024-05-23T00:00:00","CreationDate":"2024-04-02T08:10:04.2975967-04:00","IsComplete":false},{"Name":"Reread","Description":"the books if I have time to spare","Priority":4,"Category":"Night","DueDate":"2024-05-29T00:00:00","CreationDate":"2024-04-02T08:10:55.4425445-04:00","IsComplete":false},{"Name":"Paint","Description":"the walls some more I'm sure there's room somewhere","Priority":4,"Category":"Night","DueDate":"2024-05-19T00:00:00","CreationDate":"2024-04-02T08:11:25.2639763-04:00","IsComplete":false},{"Name":"Brush and brush","Description":"and brush and brush my hair","Priority":4,"Category":"Night","DueDate":"2024-06-20T00:00:00","CreationDate":"2024-04-02T08:12:30.9107151-04:00","IsComplete":false}]}]
+[
+  {
+    "username": "Rapunzel",
+    "password": "password",
+    "chores": [
+      {
+        "Name": "Sweep",
+        "Description": "Til the floor's all clean",
+        "Priority": 1,
+        "Category": "Seven AM",
+        "DueDate": "2024-04-10T00:00:00",
+        "CreationDate": "2024-04-02T07:41:50.7901867-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Polish",
+        "Description": "and wax",
+        "Priority": 1,
+        "Category": "Seven AM",
+        "DueDate": "2024-04-18T00:00:00",
+        "CreationDate": "2024-04-02T07:42:16.7390592-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Mop",
+        "Description": "and shine up",
+        "Priority": 1,
+        "Category": "Seven AM",
+        "DueDate": "2024-04-28T00:00:00",
+        "CreationDate": "2024-04-02T07:42:37.0100631-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Read",
+        "Description": "a book or maybe two or three",
+        "Priority": 2,
+        "Category": "Seven 15",
+        "DueDate": "2024-04-13T00:00:00",
+        "CreationDate": "2024-04-02T07:44:11.2140843-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Sweep",
+        "Description": "again",
+        "Priority": 1,
+        "Category": "Seven AM",
+        "DueDate": "2024-05-16T00:00:00",
+        "CreationDate": "2024-04-02T07:45:01.7059858-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "New paintings",
+        "Description": "to my gallery",
+        "Priority": 2,
+        "Category": "Seven 15",
+        "DueDate": "2024-04-25T00:00:00",
+        "CreationDate": "2024-04-02T07:46:33.1212198-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Play Guitar",
+        "Description": "and knit",
+        "Priority": 2,
+        "Category": "Seven 15",
+        "DueDate": "2024-05-13T00:00:00",
+        "CreationDate": "2024-04-02T08:07:09.5582573-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Cook",
+        "Description": "and basically wonder when will my life begin",
+        "Priority": 2,
+        "Category": "Seven 15",
+        "DueDate": "2024-05-03T00:00:00",
+        "CreationDate": "2024-04-02T08:07:36.0811746-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Puzzles",
+        "Description": "and darts and baking",
+        "Priority": 3,
+        "Category": "After lunch",
+        "DueDate": "2024-05-13T00:00:00",
+        "CreationDate": "2024-04-02T08:08:09.1503359-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Paper mache",
+        "Description": "a bit of ballet and chess",
+        "Priority": 3,
+        "Category": "After lunch",
+        "DueDate": "2024-05-10T00:00:00",
+        "CreationDate": "2024-04-02T08:08:39.0697868-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Pottery",
+        "Description": "and ventriolquy and candle making",
+        "Priority": 3,
+        "Category": "After lunch",
+        "DueDate": "2024-05-21T00:00:00",
+        "CreationDate": "2024-04-02T08:09:14.1884415-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Stretch",
+        "Description": "and sketch take a climb",
+        "Priority": 3,
+        "Category": "After lunch",
+        "DueDate": "2024-05-15T00:00:00",
+        "CreationDate": "2024-04-02T08:09:39.1123014-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Sew",
+        "Description": "a dress!",
+        "Priority": 3,
+        "Category": "After lunch",
+        "DueDate": "2024-05-23T00:00:00",
+        "CreationDate": "2024-04-02T08:10:04.2975967-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Reread",
+        "Description": "the books if I have time to spare",
+        "Priority": 4,
+        "Category": "Night",
+        "DueDate": "2024-05-29T00:00:00",
+        "CreationDate": "2024-04-02T08:10:55.4425445-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Paint",
+        "Description": "the walls some more I'm sure there's room somewhere",
+        "Priority": 4,
+        "Category": "Night",
+        "DueDate": "2024-05-19T00:00:00",
+        "CreationDate": "2024-04-02T08:11:25.2639763-04:00",
+        "IsComplete": false
+      },
+      {
+        "Name": "Brush and brush",
+        "Description": "and brush and brush my hair",
+        "Priority": 4,
+        "Category": "Night",
+        "DueDate": "2024-06-20T00:00:00",
+        "CreationDate": "2024-04-02T08:12:30.9107151-04:00",
+        "IsComplete": false
+      }
+    ]
+  }
+]

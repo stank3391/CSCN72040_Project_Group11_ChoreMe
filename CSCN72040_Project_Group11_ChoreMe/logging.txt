@@ -1,1 +1,6 @@
-New chore created: pen15, written to file
+New chore created: Sweep, written to file
+New chore created: Polish, written to file
+New chore created: Mop, written to file
+New chore created: Read, written to file
+New chore created: Sweep, written to file
+New chore created: New Paintings, written to file
